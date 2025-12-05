@@ -1,1 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ruby Xia — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ziyu (Ruby) Xia — multilingual marketing & data storytelling. Marketing strategy, localization, and data visualization with clear, accurate deliverables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --bg-elevated: #ffffff;
+      --text: #0f172a;
+      --muted: #6b7280;
+      --accent: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --radius-pill: 999px;
+      --transition-fast: 160ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 0.75rem;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header / Nav */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(249, 250, 251, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 0.1rem 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:focus-visible,
+    .nav-links a:hover {
+      outline: none;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .nav-resume {
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+    }
+
+    .nav-resume:hover,
+    .nav-resume:focus-visible {
+      background: var(--accent-soft);
+    }
+
+    /* Hero */
+
+    main {
+      padding-bottom: 4rem;
+    }
+
+    #hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subline {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-pill);
+      padding: 0.8rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      min-height: 44px;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(37, 99, 235, 0.35);
+      outline: none;
+    }
+
+    .btn-ghost {
+      background: white;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      outline: none;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hero-card {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-xl);
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .hero-card h2 {
+      font-size: 1rem;
+      margin: 0 0 0.4rem;
+    }
+
+    .hero-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    .chip {
+      padding: 0.22rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: #f3f4f6;
+      color: #4b5563;
+      white-space: nowrap;
+    }
+
+    .chip-accent {
+      border-color: rgba(37,99,235,0.2);
+      background: #eff6ff;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .small-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .mini-list li + li {
+      margin-top: 0.25rem;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 2.5rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .section-heading p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 30rem;
+    }
+
+    /* Featured Projects */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.3rem 1.3rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .project-card:hover,
+    .project-card:focus-within {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+      border-color: var(--accent-soft);
+    }
+
+    .project-eyebrow {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .project-title {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .project-hook {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .project-summary {
+      font-size: 0.88rem;
+      color: #4b5563;
+      margin: 0.15rem 0 0.3rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .project-tag {
+      padding: 0.12rem 0.55rem;
+      border-radius: var(--radius-pill);
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+    }
+
+    .featured-pill {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: #eff6ff;
+      border-radius: var(--radius-pill);
+      padding: 0.15rem 0.55rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      align-self: flex-start;
+    }
+
+    .project-footer-link {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .project-footer-link span {
+      font-size: 1.1em;
+    }
+
+    /* Skills */
+
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+    }
+
+    .skill-pill {
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-pill);
+      border: 1px dashed #cbd5f5;
+      background: #eff6ff;
+      color: #1f2937;
+    }
+
+    /* About */
+
+    #about .about-body {
+      max-width: 42rem;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    #about .about-body p {
+      margin-top: 0;
+    }
+
+    /* Work / project lineup */
+
+    #work .project-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .filter-btn {
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 0.35rem 0.9rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--muted);
+      min-height: 34px;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    .filter-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card.full {
+      min-height: 0;
+    }
+
+    /* Case study template */
+
+    #case-template .template-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .case-study {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.4rem 1.6rem;
+      border: 1px solid rgba(226,232,240,0.9);
+      box-shadow: 0 8px 22px rgba(15,23,42,0.04);
+      margin-bottom: 1.25rem;
+    }
+
+    .case-header-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .case-title {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .case-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .case-tag {
+      padding: 0.15rem 0.6rem;
+      border-radius: var(--radius-pill);
+      background: #eff6ff;
+      color: var(--accent);
+    }
+
+    .quick-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.86rem;
+      margin: 0.3rem 0 1rem;
+      padding: 0;
+    }
+
+    .quick-stats div span {
+      display: block;
+    }
+
+    .quick-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .quick-value {
+      font-weight: 500;
+    }
+
+    .case-section-title {
+      font-size: 0.92rem;
+      margin: 0.9rem 0 0.25rem;
+      font-weight: 600;
+    }
+
+    .case-section-body {
+      font-size: 0.88rem;
+      color: #374151;
+      margin: 0;
+    }
+
+    .case-section-body ul {
+      margin: 0.25rem 0 0.25rem 1.1rem;
+      padding-left: 0.75rem;
+    }
+
+    .case-section-body li {
+      margin-bottom: 0.15rem;
+    }
+
+    .case-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+      font-size: 0.86rem;
+    }
+
+    .case-link-pill {
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Google Drive docs section */
+
+    #docs iframe {
+      border: 0;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-soft);
+      background: #fff;
+    }
+
+    /* Contact */
+
+    #contact .contact-body {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-body a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr);
+      gap: 2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      font: inherit;
+      min-height: 44px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+      border-color: var(--accent);
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.4rem 0 1.7rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .footer-accessibility {
+      max-width: 20rem;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 960px) {
+      .hero-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      #hero {
+        padding-top: 2.5rem;
+      }
+      .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .work-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        gap: 0.9rem;
+        font-size: 0.85rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#hero" class="logo">Ruby Xia</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="RubyXia_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div>
+          <div class="hero-kicker">Multilingual marketing & data storytelling</div>
+          <h1 class="hero-title" id="hero-title">Ziyu (Ruby) Xia — multilingual marketing &amp; data storytelling</h1>
+          <p class="hero-subline">
+            I translate complex ideas into clear materials—strategy slides, concise research, and JP·EN·ZH localization—with organized workflows and measurable outcomes.
+          </p>
+          <div class="hero-ctas">
+            <a href="#work" class="btn btn-primary">View Work</a>
+            <a href="RubyXia_Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Résumé</a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
+          <div class="hero-meta">
+            <strong>Currently:</strong> Undergraduate at the University of Washington, based in Seattle. Focused on marketing, localization, and data visualization.
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Snapshot of work and skills">
+          <div>
+            <h2>Selected work</h2>
+            <div class="hero-chip-row">
+              <span class="chip chip-accent">AMA Case Competition</span>
+              <span class="chip">EN↔JP Technical Localization</span>
+              <span class="chip">INFO 201 · R + Quarto</span>
+            </div>
+          </div>
+          <div>
+            <div class="small-label">Strengths</div>
+            <ul class="mini-list">
+              <li>Marketing strategy, KPI frameworks, and briefing decks.</li>
+              <li>JP·EN·ZH localization for technical and regulated content.</li>
+              <li>Data cleaning and visualization in R (dplyr/ggplot, Quarto).</li>
+            </ul>
+          </div>
+          <div>
+            <div class="small-label">Tools</div>
+            <div class="hero-chip-row" aria-label="Key tools">
+              <span class="chip">R · Quarto</span>
+              <span class="chip">Excel · PowerPoint</span>
+              <span class="chip">Canva · Figma</span>
+              <span class="chip">Notion</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Featured projects (3 tiles) -->
+    <section id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="featured-heading">Featured projects</h2>
+          <p>Three projects that show how I connect marketing, localization, and data visualization to clear, decision-ready materials.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- AMA Case Competition -->
+          <article class="project-card" data-category="marketing">
+            <div class="project-eyebrow">Marketing · Strategy · Presentation</div>
+            <h3 class="project-title">AMA Case Competition — Singapore Airlines</h3>
+            <p class="project-hook">Built a multi-channel launch plan with a KPI framework and five-year outlook.</p>
+            <p class="project-summary">
+              Synthesized research, modeled scenarios, and presented to judges.
+            </p>
+            <div class="project-tags" aria-label="Tags">
+              <span class="project-tag">Marketing</span>
+              <span class="project-tag">Strategy</span>
+              <span class="project-tag">KPI Framework</span>
+            </div>
+            <span class="featured-pill">Featured</span>
+            <a href="#case-ama" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- EN↔JP Technical Localization -->
+          <article class="project-card" data-category="localization">
+            <div class="project-eyebrow">Localization · Regulated Content</div>
+            <h3 class="project-title">EN↔JP Technical Localization — Derived Samples</h3>
+            <p class="project-hook">Technical materials localized to natural, professional Japanese.</p>
+            <p class="project-summary">
+              Paraphrased samples imitating internship-level clinical/technical content with consistent terminology and register.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Localization</span>
+              <span class="project-tag">JP·EN</span>
+              <span class="project-tag">Technical</span>
+            </div>
+            <span class="featured-pill">Featured</span>
+            <a href="#case-localization" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- INFO 201 -->
+          <article class="project-card" data-category="analytics">
+            <div class="project-eyebrow">Data · Visualization</div>
+            <h3 class="project-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h3>
+            <p class="project-hook">Story-driven visuals from large public datasets.</p>
+            <p class="project-summary">
+              Cleaned, transformed, and visualized data; produced clear, reproducible Quarto reports.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">R</span>
+              <span class="project-tag">ggplot</span>
+              <span class="project-tag">Quarto</span>
+            </div>
+            <span class="featured-pill">Featured</span>
+            <a href="#case-info201" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & tools -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="skills-heading">Skills &amp; tools</h2>
+          <p>Compact overview for quick screening. I am comfortable working across marketing, localization, and analytics teams.</p>
+        </div>
+        <div class="skills-wrap" aria-label="Skills and tools">
+          <span class="skill-pill">Marketing / Strategy</span>
+          <span class="skill-pill">EN–JP–ZH Localization</span>
+          <span class="skill-pill">Research Synthesis</span>
+          <span class="skill-pill">R (dplyr / ggplot)</span>
+          <span class="skill-pill">Quarto</span>
+          <span class="skill-pill">Excel / PowerPoint / Word / Outlook</span>
+          <span class="skill-pill">Canva / Figma</span>
+          <span class="skill-pill">Notion</span>
+          <span class="skill-pill">Basic Python</span>
+          <span class="skill-pill">AI-assisted drafting / QA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="about-heading">About</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            I am a multilingual undergraduate at the University of Washington based in Seattle. I support client-facing materials and research with clear writing, JP·EN·ZH localization, and organized handoffs. My focus is accuracy, readability, and measurable results.
+          </p>
+          <p>
+            I support proposal-style materials, event documentation, and concise research with multilingual communication (EN/JP/ZH). My work emphasizes accuracy, readability, and organized handoffs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work: full project lineup with filters -->
+    <section id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="work-heading">Work</h2>
+          <p>Evergreen lineup of projects. Use filters to focus on marketing, analytics, or localization work.</p>
+        </div>
+
+        <div class="project-filters" aria-label="Work filters">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="marketing" type="button">Marketing</button>
+          <button class="filter-btn" data-filter="analytics" type="button">Analytics</button>
+          <button class="filter-btn" data-filter="localization" type="button">Localization</button>
+        </div>
+
+        <div class="work-grid">
+          <!-- AMA -->
+          <article class="project-card full" data-category="marketing">
+            <div class="project-eyebrow">Marketing · Strategy · Presentation</div>
+            <h3 class="project-title">AMA Case Competition — Singapore Airlines</h3>
+            <p class="project-hook">Multi-channel launch plan with KPIs &amp; five-year outlook.</p>
+            <p class="project-summary">
+              Built brand strategy, KPI framework, and financial projections; presented to judges.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Marketing</span>
+              <span class="project-tag">Strategy</span>
+              <span class="project-tag">Presentation</span>
+            </div>
+            <a href="#case-ama" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- Localization -->
+          <article class="project-card full" data-category="localization">
+            <div class="project-eyebrow">Localization · Regulated Content</div>
+            <h3 class="project-title">EN↔JP Technical Localization — Derived Samples</h3>
+            <p class="project-hook">Technical materials localized to natural, professional Japanese.</p>
+            <p class="project-summary">
+              Paraphrased samples that imitate internship-level clinical/technical content; consistent terminology and register.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Localization</span>
+              <span class="project-tag">JP·EN</span>
+              <span class="project-tag">Technical</span>
+            </div>
+            <a href="#case-localization" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- King County Market Analysis -->
+          <article class="project-card full" data-category="analytics marketing">
+            <div class="project-eyebrow">Research · Analytics</div>
+            <h3 class="project-title">King County Market Analysis — Real-Estate Brief</h3>
+            <p class="project-hook">$100M hypothetical investment brief with risk analysis.</p>
+            <p class="project-summary">
+              Scoped area, compiled supply/demand data, and delivered a risk-aware recommendation with citations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Research</span>
+              <span class="project-tag">Analytics</span>
+              <span class="project-tag">Real Estate</span>
+            </div>
+            <a href="#case-kingcounty" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- INFO 201 -->
+          <article class="project-card full" data-category="analytics">
+            <div class="project-eyebrow">Data · Visualization</div>
+            <h3 class="project-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h3>
+            <p class="project-hook">Story-driven visuals from large public datasets.</p>
+            <p class="project-summary">
+              Cleaned, transformed, and visualized data; reproducible Quarto reports.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Data</span>
+              <span class="project-tag">Visualization</span>
+              <span class="project-tag">Quarto</span>
+            </div>
+            <a href="#case-info201" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <!-- UWiB Marketing -->
+          <article class="project-card full" data-category="marketing">
+            <div class="project-eyebrow">Design · Content</div>
+            <h3 class="project-title">UWiB Marketing — Social Graphics</h3>
+            <p class="project-hook">Event promo designs that clarify information and boost visibility.</p>
+            <p class="project-summary">
+              Produced concise Instagram/poster assets aligned to brand tone.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Design</span>
+              <span class="project-tag">Content</span>
+              <span class="project-tag">Social</span>
+            </div>
+            <a href="#case-uwib" class="project-footer-link">
+              View case study <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case-study template & pre-filled snippets -->
+    <section id="case-template" aria-labelledby="case-template-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="case-template-heading">Case studies</h2>
+          <p>Each project uses the same structure: clear context, contribution, process, results, and reflection.</p>
+        </div>
+        <p class="template-note">
+          Template structure: <strong>Title · Role · Year · Tags · Quick Stats · Context · My Contribution · Process · Result &amp; Evidence · Reflection · Links/Assets</strong>.
+        </p>
+
+        <!-- AMA Case Study -->
+        <article class="case-study" id="case-ama">
+          <div class="case-header-top">
+            <div>
+              <h3 class="case-title">AMA Case Competition — Singapore Airlines</h3>
+              <div class="case-meta">Role: Marketing strategist · Year: 2024</div>
+              <div class="case-tags" aria-label="Project tags">
+                <span class="case-tag">Marketing</span>
+                <span class="case-tag">Strategy</span>
+                <span class="case-tag">Presentation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-stats" aria-label="Quick project stats">
+            <div>
+              <span class="quick-label">Duration</span>
+              <span class="quick-value">~6 weeks</span>
+            </div>
+            <div>
+              <span class="quick-label">Team size</span>
+              <span class="quick-value">4</span>
+            </div>
+            <div>
+              <span class="quick-label">Tools</span>
+              <span class="quick-value">PowerPoint, Excel, Canva</span>
+            </div>
+          </div>
+
+          <h4 class="case-section-title">Context</h4>
+          <p class="case-section-body">
+            The American Marketing Association case asked teams to design a launch and growth strategy for Singapore Airlines in a competitive market. We needed a realistic plan that balanced brand equity, demand uncertainty, and financial constraints while fitting a student competition scope and judging rubric.
+          </p>
+
+          <h4 class="case-section-title">My contribution</h4>
+          <div class="case-section-body">
+            <ul>
+              <li>Synthesized market and competitor research; built KPI framework and five-year outlook; authored executive slides; presented to judges.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Process</h4>
+          <div class="case-section-body">
+            <ul>
+              <li><strong>Research:</strong> Collected secondary data on target segments, competitive routes, and partnership benchmarks.</li>
+              <li><strong>Synthesis:</strong> Prioritized opportunities and risks; aligned team on positioning and growth levers.</li>
+              <li><strong>Strategy &amp; design:</strong> Defined channel mix, KPI ladder, and phased roadmap; structured the briefing deck.</li>
+              <li><strong>Validation:</strong> Sanity-checked financial model and storytelling flow with peer feedback before final presentation.</li>
+              <li><strong>Delivery:</strong> Presented the strategy and financial outlook to judges with a concise, visual deck.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Result &amp; evidence</h4>
+          <p class="case-section-body">
+            Delivered a multi-channel launch plan with a KPI framework and five-year outlook that met the judging criteria and clearly communicated assumptions and trade-offs. The final deck highlighted channel priorities, financial projections, and risk mitigations in a format ready for decision-makers.
+          </p>
+
+          <h4 class="case-section-title">Reflection</h4>
+          <p class="case-section-body">
+            Next time, I would build a more detailed sensitivity analysis on key assumptions (fuel prices, partnership structure) and incorporate more primary research to validate segment hypotheses.
+          </p>
+
+          <h4 class="case-section-title">Links / assets</h4>
+          <div class="case-section-body case-links">
+            <a href="#" class="case-link-pill">Strategy deck (PDF)</a>
+            <a href="#" class="case-link-pill">Sample KPI table</a>
+          </div>
+        </article>
+
+        <!-- Localization Case Study -->
+        <article class="case-study" id="case-localization">
+          <div class="case-header-top">
+            <div>
+              <h3 class="case-title">EN↔JP Technical Localization — Derived Samples</h3>
+              <div class="case-meta">Role: JP·EN translator · Year: 2024</div>
+              <div class="case-tags">
+                <span class="case-tag">Localization</span>
+                <span class="case-tag">Regulated Content</span>
+                <span class="case-tag">JP·EN</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-stats">
+            <div>
+              <span class="quick-label">Duration</span>
+              <span class="quick-value">Ongoing samples</span>
+            </div>
+            <div>
+              <span class="quick-label">Languages</span>
+              <span class="quick-value">Japanese · English</span>
+            </div>
+            <div>
+              <span class="quick-label">Tools</span>
+              <span class="quick-value">Docs, reference guidelines</span>
+            </div>
+          </div>
+
+          <h4 class="case-section-title">Context</h4>
+          <p class="case-section-body">
+            I built a set of self-contained EN↔JP samples that imitate clinical and technical content without exposing proprietary materials. The goal was to demonstrate my ability to handle regulated-style language, consistent terminology, and natural Japanese while keeping content safe to share publicly.
+          </p>
+
+          <h4 class="case-section-title">My contribution</h4>
+          <div class="case-section-body">
+            <ul>
+              <li>Produced paraphrased JP translations imitating clinical/technical content; created mini glossary; documented choices for consistency.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Process</h4>
+          <div class="case-section-body">
+            <ul>
+              <li><strong>Research:</strong> Reviewed public Japanese medical and technical references for terminology and tone.</li>
+              <li><strong>Synthesis:</strong> Identified typical sentence patterns, disclaimers, and domain-specific phrasing.</li>
+              <li><strong>Localization:</strong> Drafted and refined translations with attention to register, readability, and legal-sounding clarity.</li>
+              <li><strong>Verification:</strong> Cross-checked terminology across the mini glossary and sample pages.</li>
+              <li><strong>Packaging:</strong> Combined samples into a compact PDF that can be safely shared with recruiters and hiring managers.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Result &amp; evidence</h4>
+          <p class="case-section-body">
+            The final samples show internship-level clinical and technical localization work with consistent terminology and professional register. They demonstrate that I can translate, localize, and document decisions in a way that supports review and quality assurance.
+          </p>
+
+          <h4 class="case-section-title">Reflection</h4>
+          <p class="case-section-body">
+            For future iterations, I would expand the glossary to cover more edge cases and add side-by-side commentary to show how I resolve ambiguous phrases.
+          </p>
+
+          <h4 class="case-section-title">Links / assets</h4>
+          <div class="case-section-body case-links">
+            <a href="#" class="case-link-pill">Translation_Samples_EN↔JP_Original_RubyXia.pdf</a>
+          </div>
+        </article>
+
+        <!-- INFO 201 Case Study -->
+        <article class="case-study" id="case-info201">
+          <div class="case-header-top">
+            <div>
+              <h3 class="case-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h3>
+              <div class="case-meta">Role: Data analyst · Year: 2024</div>
+              <div class="case-tags">
+                <span class="case-tag">Data</span>
+                <span class="case-tag">Visualization</span>
+                <span class="case-tag">Quarto</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-stats">
+            <div>
+              <span class="quick-label">Duration</span>
+              <span class="quick-value">Academic quarter</span>
+            </div>
+            <div>
+              <span class="quick-label">Tools</span>
+              <span class="quick-value">R, dplyr, ggplot2, Quarto</span>
+            </div>
+          </div>
+
+          <h4 class="case-section-title">Context</h4>
+          <p class="case-section-body">
+            INFO 201 assignments focused on using public datasets to answer social and policy questions. I needed to clean and transform data, build clear charts, and explain findings in a way that non-technical readers could follow.
+          </p>
+
+          <h4 class="case-section-title">My contribution</h4>
+          <div class="case-section-body">
+            <ul>
+              <li>Cleaned data with dplyr; created charts in ggplot; authored Quarto narrative; ensured reproducibility.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Process</h4>
+          <div class="case-section-body">
+            <ul>
+              <li><strong>Research:</strong> Selected relevant public datasets and clarified the questions to answer.</li>
+              <li><strong>Transformation:</strong> Used dplyr to filter, join, and summarize data into analysis-ready tables.</li>
+              <li><strong>Visualization:</strong> Built ggplot charts emphasizing comparisons and trends aligned with the narrative.</li>
+              <li><strong>Documentation:</strong> Wrote Quarto text blocks explaining methods, assumptions, and limitations.</li>
+              <li><strong>Reproducibility:</strong> Kept all code and narrative in one Quarto file so results can be re-run easily.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Result &amp; evidence</h4>
+          <p class="case-section-body">
+            Produced reproducible reports that combine R code, charts, and commentary. Each deliverable helps non-technical readers see where the data came from, how it was processed, and what it suggests.
+          </p>
+
+          <h4 class="case-section-title">Reflection</h4>
+          <p class="case-section-body">
+            In future work, I would add more sensitivity checks and confidence intervals, and experiment with interactive dashboards where appropriate.
+          </p>
+
+          <h4 class="case-section-title">Links / assets</h4>
+          <div class="case-section-body case-links">
+            <a href="#" class="case-link-pill">Sample Quarto report</a>
+            <a href="#" class="case-link-pill">Selected charts (PNG)</a>
+          </div>
+        </article>
+
+        <!-- King County Case Study -->
+        <article class="case-study" id="case-kingcounty">
+          <div class="case-header-top">
+            <div>
+              <h3 class="case-title">King County Market Analysis — Real-Estate Brief</h3>
+              <div class="case-meta">Role: Researcher · Year: 2024</div>
+              <div class="case-tags">
+                <span class="case-tag">Research</span>
+                <span class="case-tag">Analytics</span>
+                <span class="case-tag">Real Estate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-stats">
+            <div>
+              <span class="quick-label">Duration</span>
+              <span class="quick-value">~3 weeks</span>
+            </div>
+            <div>
+              <span class="quick-label">Team size</span>
+              <span class="quick-value">Individual brief</span>
+            </div>
+          </div>
+
+          <h4 class="case-section-title">Context</h4>
+          <p class="case-section-body">
+            This hypothetical brief assumed a $100M allocation for a real-estate investment in King County. I needed to assess submarkets, supply and demand trends, and risk factors to recommend a direction grounded in data.
+          </p>
+
+          <h4 class="case-section-title">My contribution</h4>
+          <div class="case-section-body">
+            <ul>
+              <li>Collected public records and broker reports; modeled demand/supply scenarios; drafted risk-adjusted recommendation.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Process</h4>
+          <div class="case-section-body">
+            <ul>
+              <li><strong>Research:</strong> Pulled data on vacancies, absorption, new supply, and pricing across submarkets.</li>
+              <li><strong>Synthesis:</strong> Identified segments with favorable long-term fundamentals and manageable risks.</li>
+              <li><strong>Scenario modeling:</strong> Built simple demand/supply scenarios to stress-test the recommendation.</li>
+              <li><strong>Briefing deck:</strong> Structured the recommendation into a concise, citation-backed written brief.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Result &amp; evidence</h4>
+          <p class="case-section-body">
+            The brief clearly explained where and why the hypothetical fund should allocate capital, along with key risks and data sources. It demonstrates my ability to combine research with simple, transparent assumptions.
+          </p>
+
+          <h4 class="case-section-title">Reflection</h4>
+          <p class="case-section-body">
+            If I revisit this project, I would add more sensitivity analysis on cap rates and financing conditions and incorporate maps to visualize submarket differences.
+          </p>
+
+          <h4 class="case-section-title">Links / assets</h4>
+          <div class="case-section-body case-links">
+            <a href="#" class="case-link-pill">Investment brief (PDF)</a>
+          </div>
+        </article>
+
+        <!-- UWiB Case Study -->
+        <article class="case-study" id="case-uwib">
+          <div class="case-header-top">
+            <div>
+              <h3 class="case-title">UWiB Marketing — Social Graphics</h3>
+              <div class="case-meta">Role: Marketing &amp; design support · Year: 2024</div>
+              <div class="case-tags">
+                <span class="case-tag">Design</span>
+                <span class="case-tag">Content</span>
+                <span class="case-tag">Social</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-stats">
+            <div>
+              <span class="quick-label">Duration</span>
+              <span class="quick-value">Ongoing</span>
+            </div>
+            <div>
+              <span class="quick-label">Tools</span>
+              <span class="quick-value">Canva, brand templates</span>
+            </div>
+          </div>
+
+          <h4 class="case-section-title">Context</h4>
+          <p class="case-section-body">
+            UWiB events need simple, clear assets that convey key details quickly on Instagram and posters. The challenge is to balance brand consistency, readability, and fast turnaround.
+          </p>
+
+          <h4 class="case-section-title">My contribution</h4>
+          <div class="case-section-body">
+            <ul>
+              <li>Designed event flyers and short social posts; maintained deadlines tracker; aligned tone with brand guidance.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Process</h4>
+          <div class="case-section-body">
+            <ul>
+              <li><strong>Brief intake:</strong> Collected essential event details (who, what, when, where, why).</li>
+              <li><strong>Layout:</strong> Created layouts that prioritize date/time and call-to-action with minimal clutter.</li>
+              <li><strong>Iteration:</strong> Adjusted designs quickly based on committee feedback and schedule changes.</li>
+              <li><strong>Delivery:</strong> Exported assets in the correct formats and shared with the team for posting.</li>
+            </ul>
+          </div>
+
+          <h4 class="case-section-title">Result &amp; evidence</h4>
+          <p class="case-section-body">
+            Delivered concise Instagram and poster assets that match the organization’s tone and make it easy for students to understand event details at a glance.
+          </p>
+
+          <h4 class="case-section-title">Reflection</h4>
+          <p class="case-section-body">
+            In future, I would like to standardize a small set of templates and add simple performance tracking on posts to connect visuals to outcomes.
+          </p>
+
+          <h4 class="case-section-title">Links / assets</h4>
+          <div class="case-section-body case-links">
+            <a href="#" class="case-link-pill">Sample Instagram posts</a>
+            <a href="#" class="case-link-pill">Poster layout</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Google Drive docs section -->
+    <section id="docs" aria-labelledby="docs-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="docs-heading">Documents (Google Drive)</h2>
+          <p>
+            Public-safe documents, translation samples, and briefs are organized in this Google Drive folder.
+            You can browse or open items in a new tab.
+          </p>
+        </div>
+
+        <!-- This iframe shows your shared Drive folder -->
+        <iframe
+          src="https://drive.google.com/embeddedfolderview?id=1ilmWrH4HcGjcU1ujFeOS-VyFFb9e1XD1#list"
+          style="width: 100%; height: 500px;"
+          title="Project documents folder on Google Drive">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="contact-heading">Let’s work together.</h2>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-body">
+            <p>
+              Email me at <a href="mailto:rubyxia369@gmail.com">rubyxia369@gmail.com</a>
+              or connect on
+              <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>.
+            </p>
+            <p>
+              I am open to marketing, localization, and data-focused roles where clear communication and organized handoffs matter.
+            </p>
+          </div>
+
+          <form aria-label="Contact form">
+            <div>
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" name="subject" type="text" placeholder="Project, role, or question" />
+            </div>
+            <div>
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Share a few details about what you have in mind."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-row">
+      <div>
+        © Ziyu (Ruby) Xia
+      </div>
+      <div class="footer-links">
+        <a href="RubyXia_Resume.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a>
+      </div>
+      <div class="footer-accessibility">
+        Accessibility: alt text on images, high-contrast palette, keyboard-navigable forms.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple work filter
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const workCards = document.querySelectorAll("#work .project-card");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        workCards.forEach((card) => {
+          const categories = (card.dataset.category || "").split(" ");
+          const show = filter === "all" || categories.includes(filter);
+          card.style.display = show ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
 
