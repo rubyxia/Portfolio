@@ -145,7 +145,7 @@
 
     .hero-layout {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      grid-template-columns: minmax(0, 1fr);
       gap: 3rem;
       align-items: center;
     }
@@ -590,70 +590,6 @@
       font-weight: 500;
     }
 
-    /* Google Drive docs section */
-
-    #docs iframe {
-      border: 0;
-      width: 100%;
-      max-width: 100%;
-      border-radius: 0.75rem;
-      box-shadow: var(--shadow-soft);
-      background: #fff;
-    }
-
-    /* Contact */
-
-    #contact .contact-body {
-      font-size: 0.95rem;
-      color: #374151;
-      margin-bottom: 1.4rem;
-    }
-
-    .contact-body a {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr);
-      gap: 2rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.8rem;
-      font-size: 0.9rem;
-    }
-
-    label {
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 0.65rem 0.8rem;
-      border-radius: 0.75rem;
-      border: 1px solid var(--border);
-      font: inherit;
-      min-height: 44px;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    input:focus-visible,
-    textarea:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 1px;
-      border-color: var(--accent);
-    }
-
     /* Footer */
 
     footer {
@@ -726,7 +662,7 @@
     <div class="container nav">
       <a href="#hero" class="logo">Ruby Xia</a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#work">Work</a>
+       <a href="work.html">Work</a>
         <a href="#about">About</a>
         <a href="Ziyu_Xia_Resume_Primary.pdf" class="nav-resume" target="_blank" rel="noopener">Résumé</a>
         <a href="#contact">Contact</a>
@@ -746,11 +682,11 @@
           <p class="hero-subline">
              I translate complex ideas into clear materials—briefing decks, bilingual documents, and simple data-backed visuals—across Japanese · English · Chinese, with organized workflows and measurable outcomes.
           </p>
-          <div class="hero-ctas">
-            <a href="#work" class="btn btn-primary">View Work</a>
-            <a href="Ziyu_Xia_Resume_Primary.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Résumé</a>
-            <a href="#contact" class="btn btn-ghost">Contact</a>
-          </div>
+         <div class="hero-ctas">
+          <a href="work.html" class="btn btn-primary">View Work</a>
+          <a href="Ziyu_Xia_Resume_Primary.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Résumé</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </div>
           <div class="hero-meta">
             <strong>Currently:</strong> Undergraduate at the University of Washington, based in Seattle. Focused on marketing, localization, and data visualization.
           </div>
@@ -867,477 +803,6 @@
       </div>
     </section>
 
-    <!-- Work: full project lineup with filters -->
-    <section id="work" aria-labelledby="work-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="work-heading">Work</h2>
-          <p>Evergreen lineup of projects. Use filters to focus on marketing, analytics, or localization work.</p>
-        </div>
-
-        <div class="project-filters" aria-label="Work filters">
-          <button class="filter-btn active" data-filter="all" type="button">All</button>
-          <button class="filter-btn" data-filter="marketing" type="button">Marketing</button>
-          <button class="filter-btn" data-filter="analytics" type="button">Analytics</button>
-          <button class="filter-btn" data-filter="localization" type="button">Localization</button>
-        </div>
-
-        <div class="work-grid">
-          <!-- AMA -->
-          <article class="project-card full" data-category="marketing">
-            <div class="project-eyebrow">Marketing · Strategy · Presentation</div>
-            <h3 class="project-title">AMA Case Competition — Singapore Airlines</h3>
-            <p class="project-hook">Multi-channel launch plan with KPIs &amp; five-year outlook.</p>
-            <p class="project-summary">
-              Built brand strategy, KPI framework, and financial projections; presented to judges.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Marketing</span>
-              <span class="project-tag">Strategy</span>
-              <span class="project-tag">Presentation</span>
-            </div>
-            <a href="#case-ama" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- Localization -->
-          <article class="project-card full" data-category="localization">
-            <div class="project-eyebrow">Localization · Regulated Content</div>
-            <h3 class="project-title">EN↔JP Technical Localization — Derived Samples</h3>
-            <p class="project-hook">Technical materials localized to natural, professional Japanese.</p>
-            <p class="project-summary">
-              Paraphrased samples that imitate internship-level clinical/technical content; consistent terminology and register.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Localization</span>
-              <span class="project-tag">JP·EN</span>
-              <span class="project-tag">Technical</span>
-            </div>
-            <a href="#case-localization" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- King County Market Analysis -->
-          <article class="project-card full" data-category="analytics marketing">
-            <div class="project-eyebrow">Research · Analytics</div>
-            <h3 class="project-title">King County Market Analysis — Real-Estate Brief</h3>
-            <p class="project-hook">$100M hypothetical investment brief with risk analysis.</p>
-            <p class="project-summary">
-              Scoped area, compiled supply/demand data, and delivered a risk-aware recommendation with citations.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Research</span>
-              <span class="project-tag">Analytics</span>
-              <span class="project-tag">Real Estate</span>
-            </div>
-            <a href="#case-kingcounty" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- INFO 201 -->
-          <article class="project-card full" data-category="analytics">
-            <div class="project-eyebrow">Data · Visualization</div>
-            <h3 class="project-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h3>
-            <p class="project-hook">Story-driven visuals from large public datasets.</p>
-            <p class="project-summary">
-              Cleaned, transformed, and visualized data; reproducible Quarto reports.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Data</span>
-              <span class="project-tag">Visualization</span>
-              <span class="project-tag">Quarto</span>
-            </div>
-            <a href="#case-info201" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- UWiB Marketing -->
-          <article class="project-card full" data-category="marketing">
-            <div class="project-eyebrow">Design · Content</div>
-            <h3 class="project-title">UWiB Marketing — Social Graphics</h3>
-            <p class="project-hook">Event promo designs that clarify information and boost visibility.</p>
-            <p class="project-summary">
-              Produced concise Instagram/poster assets aligned to brand tone.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Design</span>
-              <span class="project-tag">Content</span>
-              <span class="project-tag">Social</span>
-            </div>
-            <a href="#case-uwib" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case-study template & pre-filled snippets -->
-    <section id="case-template" aria-labelledby="case-template-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="case-template-heading">Case studies</h2>
-          <p>Each project uses the same structure: clear context, contribution, process, results, and reflection.</p>
-        </div>
-        <p class="template-note">
-          Template structure: <strong>Title · Role · Year · Tags · Quick Stats · Context · My Contribution · Process · Result &amp; Evidence · Reflection · Links/Assets</strong>.
-        </p>
-
-        <!-- AMA Case Study -->
-        <article class="case-study" id="case-ama">
-          <div class="case-header-top">
-            <div>
-              <h3 class="case-title">AMA Case Competition — Singapore Airlines</h3>
-              <div class="case-meta">Role: Marketing strategist · Year: 2024</div>
-              <div class="case-tags" aria-label="Project tags">
-                <span class="case-tag">Marketing</span>
-                <span class="case-tag">Strategy</span>
-                <span class="case-tag">Presentation</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quick-stats" aria-label="Quick project stats">
-            <div>
-              <span class="quick-label">Duration</span>
-              <span class="quick-value">~6 weeks</span>
-            </div>
-            <div>
-              <span class="quick-label">Team size</span>
-              <span class="quick-value">4</span>
-            </div>
-            <div>
-              <span class="quick-label">Tools</span>
-              <span class="quick-value">PowerPoint, Excel, Canva</span>
-            </div>
-          </div>
-
-          <h4 class="case-section-title">Context</h4>
-          <p class="case-section-body">
-            The American Marketing Association case asked teams to design a launch and growth strategy for Singapore Airlines in a competitive market. We needed a realistic plan that balanced brand equity, demand uncertainty, and financial constraints while fitting a student competition scope and judging rubric.
-          </p>
-
-          <h4 class="case-section-title">My contribution</h4>
-          <div class="case-section-body">
-            <ul>
-              <li>Synthesized market and competitor research; built KPI framework and five-year outlook; authored executive slides; presented to judges.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Process</h4>
-          <div class="case-section-body">
-            <ul>
-              <li><strong>Research:</strong> Collected secondary data on target segments, competitive routes, and partnership benchmarks.</li>
-              <li><strong>Synthesis:</strong> Prioritized opportunities and risks; aligned team on positioning and growth levers.</li>
-              <li><strong>Strategy &amp; design:</strong> Defined channel mix, KPI ladder, and phased roadmap; structured the briefing deck.</li>
-              <li><strong>Validation:</strong> Sanity-checked financial model and storytelling flow with peer feedback before final presentation.</li>
-              <li><strong>Delivery:</strong> Presented the strategy and financial outlook to judges with a concise, visual deck.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Result &amp; evidence</h4>
-          <p class="case-section-body">
-            Delivered a multi-channel launch plan with a KPI framework and five-year outlook that met the judging criteria and clearly communicated assumptions and trade-offs. The final deck highlighted channel priorities, financial projections, and risk mitigations in a format ready for decision-makers.
-          </p>
-
-          <h4 class="case-section-title">Reflection</h4>
-          <p class="case-section-body">
-            Next time, I would build a more detailed sensitivity analysis on key assumptions (fuel prices, partnership structure) and incorporate more primary research to validate segment hypotheses.
-          </p>
-
-          <h4 class="case-section-title">Links / assets</h4>
-          <div class="case-section-body case-links">
-            <a href="#" class="case-link-pill">Strategy deck (PDF)</a>
-            <a href="#" class="case-link-pill">Sample KPI table</a>
-          </div>
-        </article>
-
-        <!-- Localization Case Study -->
-        <article class="case-study" id="case-localization">
-          <div class="case-header-top">
-            <div>
-              <h3 class="case-title">EN↔JP Technical Localization — Derived Samples</h3>
-              <div class="case-meta">Role: JP·EN translator · Year: 2024</div>
-              <div class="case-tags">
-                <span class="case-tag">Localization</span>
-                <span class="case-tag">Regulated Content</span>
-                <span class="case-tag">JP·EN</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quick-stats">
-            <div>
-              <span class="quick-label">Duration</span>
-              <span class="quick-value">Ongoing samples</span>
-            </div>
-            <div>
-              <span class="quick-label">Languages</span>
-              <span class="quick-value">Japanese · English</span>
-            </div>
-            <div>
-              <span class="quick-label">Tools</span>
-              <span class="quick-value">Docs, reference guidelines</span>
-            </div>
-          </div>
-
-          <h4 class="case-section-title">Context</h4>
-          <p class="case-section-body">
-            I built a set of self-contained EN↔JP samples that imitate clinical and technical content without exposing proprietary materials. The goal was to demonstrate my ability to handle regulated-style language, consistent terminology, and natural Japanese while keeping content safe to share publicly.
-          </p>
-
-          <h4 class="case-section-title">My contribution</h4>
-          <div class="case-section-body">
-            <ul>
-              <li>Produced paraphrased JP translations imitating clinical/technical content; created mini glossary; documented choices for consistency.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Process</h4>
-          <div class="case-section-body">
-            <ul>
-              <li><strong>Research:</strong> Reviewed public Japanese medical and technical references for terminology and tone.</li>
-              <li><strong>Synthesis:</strong> Identified typical sentence patterns, disclaimers, and domain-specific phrasing.</li>
-              <li><strong>Localization:</strong> Drafted and refined translations with attention to register, readability, and legal-sounding clarity.</li>
-              <li><strong>Verification:</strong> Cross-checked terminology across the mini glossary and sample pages.</li>
-              <li><strong>Packaging:</strong> Combined samples into a compact PDF that can be safely shared with recruiters and hiring managers.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Result &amp; evidence</h4>
-          <p class="case-section-body">
-            The final samples show internship-level clinical and technical localization work with consistent terminology and professional register. They demonstrate that I can translate, localize, and document decisions in a way that supports review and quality assurance.
-          </p>
-
-          <h4 class="case-section-title">Reflection</h4>
-          <p class="case-section-body">
-            For future iterations, I would expand the glossary to cover more edge cases and add side-by-side commentary to show how I resolve ambiguous phrases.
-          </p>
-
-          <h4 class="case-section-title">Links / assets</h4>
-          <div class="case-section-body case-links">
-            <a href="#" class="case-link-pill">Translation_Samples_EN↔JP_Original_RubyXia.pdf</a>
-          </div>
-        </article>
-
-        <!-- INFO 201 Case Study -->
-        <article class="case-study" id="case-info201">
-          <div class="case-header-top">
-            <div>
-              <h3 class="case-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h3>
-              <div class="case-meta">Role: Data analyst · Year: 2024</div>
-              <div class="case-tags">
-                <span class="case-tag">Data</span>
-                <span class="case-tag">Visualization</span>
-                <span class="case-tag">Quarto</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quick-stats">
-            <div>
-              <span class="quick-label">Duration</span>
-              <span class="quick-value">Academic quarter</span>
-            </div>
-            <div>
-              <span class="quick-label">Tools</span>
-              <span class="quick-value">R, dplyr, ggplot2, Quarto</span>
-            </div>
-          </div>
-
-          <h4 class="case-section-title">Context</h4>
-          <p class="case-section-body">
-            INFO 201 assignments focused on using public datasets to answer social and policy questions. I needed to clean and transform data, build clear charts, and explain findings in a way that non-technical readers could follow.
-          </p>
-
-          <h4 class="case-section-title">My contribution</h4>
-          <div class="case-section-body">
-            <ul>
-              <li>Cleaned data with dplyr; created charts in ggplot; authored Quarto narrative; ensured reproducibility.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Process</h4>
-          <div class="case-section-body">
-            <ul>
-              <li><strong>Research:</strong> Selected relevant public datasets and clarified the questions to answer.</li>
-              <li><strong>Transformation:</strong> Used dplyr to filter, join, and summarize data into analysis-ready tables.</li>
-              <li><strong>Visualization:</strong> Built ggplot charts emphasizing comparisons and trends aligned with the narrative.</li>
-              <li><strong>Documentation:</strong> Wrote Quarto text blocks explaining methods, assumptions, and limitations.</li>
-              <li><strong>Reproducibility:</strong> Kept all code and narrative in one Quarto file so results can be re-run easily.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Result &amp; evidence</h4>
-          <p class="case-section-body">
-            Produced reproducible reports that combine R code, charts, and commentary. Each deliverable helps non-technical readers see where the data came from, how it was processed, and what it suggests.
-          </p>
-
-          <h4 class="case-section-title">Reflection</h4>
-          <p class="case-section-body">
-            In future work, I would add more sensitivity checks and confidence intervals, and experiment with interactive dashboards where appropriate.
-          </p>
-
-          <h4 class="case-section-title">Links / assets</h4>
-          <div class="case-section-body case-links">
-            <a href="#" class="case-link-pill">Sample Quarto report</a>
-            <a href="#" class="case-link-pill">Selected charts (PNG)</a>
-          </div>
-        </article>
-
-        <!-- King County Case Study -->
-        <article class="case-study" id="case-kingcounty">
-          <div class="case-header-top">
-            <div>
-              <h3 class="case-title">King County Market Analysis — Real-Estate Brief</h3>
-              <div class="case-meta">Role: Researcher · Year: 2024</div>
-              <div class="case-tags">
-                <span class="case-tag">Research</span>
-                <span class="case-tag">Analytics</span>
-                <span class="case-tag">Real Estate</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quick-stats">
-            <div>
-              <span class="quick-label">Duration</span>
-              <span class="quick-value">~3 weeks</span>
-            </div>
-            <div>
-              <span class="quick-label">Team size</span>
-              <span class="quick-value">Individual brief</span>
-            </div>
-          </div>
-
-          <h4 class="case-section-title">Context</h4>
-          <p class="case-section-body">
-            This hypothetical brief assumed a $100M allocation for a real-estate investment in King County. I needed to assess submarkets, supply and demand trends, and risk factors to recommend a direction grounded in data.
-          </p>
-
-          <h4 class="case-section-title">My contribution</h4>
-          <div class="case-section-body">
-            <ul>
-              <li>Collected public records and broker reports; modeled demand/supply scenarios; drafted risk-adjusted recommendation.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Process</h4>
-          <div class="case-section-body">
-            <ul>
-              <li><strong>Research:</strong> Pulled data on vacancies, absorption, new supply, and pricing across submarkets.</li>
-              <li><strong>Synthesis:</strong> Identified segments with favorable long-term fundamentals and manageable risks.</li>
-              <li><strong>Scenario modeling:</strong> Built simple demand/supply scenarios to stress-test the recommendation.</li>
-              <li><strong>Briefing deck:</strong> Structured the recommendation into a concise, citation-backed written brief.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Result &amp; evidence</h4>
-          <p class="case-section-body">
-            The brief clearly explained where and why the hypothetical fund should allocate capital, along with key risks and data sources. It demonstrates my ability to combine research with simple, transparent assumptions.
-          </p>
-
-          <h4 class="case-section-title">Reflection</h4>
-          <p class="case-section-body">
-            If I revisit this project, I would add more sensitivity analysis on cap rates and financing conditions and incorporate maps to visualize submarket differences.
-          </p>
-
-          <h4 class="case-section-title">Links / assets</h4>
-          <div class="case-section-body case-links">
-            <a href="#" class="case-link-pill">Investment brief (PDF)</a>
-          </div>
-        </article>
-
-        <!-- UWiB Case Study -->
-        <article class="case-study" id="case-uwib">
-          <div class="case-header-top">
-            <div>
-              <h3 class="case-title">UWiB Marketing — Social Graphics</h3>
-              <div class="case-meta">Role: Marketing &amp; design support · Year: 2024</div>
-              <div class="case-tags">
-                <span class="case-tag">Design</span>
-                <span class="case-tag">Content</span>
-                <span class="case-tag">Social</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quick-stats">
-            <div>
-              <span class="quick-label">Duration</span>
-              <span class="quick-value">Ongoing</span>
-            </div>
-            <div>
-              <span class="quick-label">Tools</span>
-              <span class="quick-value">Canva, brand templates</span>
-            </div>
-          </div>
-
-          <h4 class="case-section-title">Context</h4>
-          <p class="case-section-body">
-            UWiB events need simple, clear assets that convey key details quickly on Instagram and posters. The challenge is to balance brand consistency, readability, and fast turnaround.
-          </p>
-
-          <h4 class="case-section-title">My contribution</h4>
-          <div class="case-section-body">
-            <ul>
-              <li>Designed event flyers and short social posts; maintained deadlines tracker; aligned tone with brand guidance.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Process</h4>
-          <div class="case-section-body">
-            <ul>
-              <li><strong>Brief intake:</strong> Collected essential event details (who, what, when, where, why).</li>
-              <li><strong>Layout:</strong> Created layouts that prioritize date/time and call-to-action with minimal clutter.</li>
-              <li><strong>Iteration:</strong> Adjusted designs quickly based on committee feedback and schedule changes.</li>
-              <li><strong>Delivery:</strong> Exported assets in the correct formats and shared with the team for posting.</li>
-            </ul>
-          </div>
-
-          <h4 class="case-section-title">Result &amp; evidence</h4>
-          <p class="case-section-body">
-            Delivered concise Instagram and poster assets that match the organization’s tone and make it easy for students to understand event details at a glance.
-          </p>
-
-          <h4 class="case-section-title">Reflection</h4>
-          <p class="case-section-body">
-            In future, I would like to standardize a small set of templates and add simple performance tracking on posts to connect visuals to outcomes.
-          </p>
-
-          <h4 class="case-section-title">Links / assets</h4>
-          <div class="case-section-body case-links">
-            <a href="#" class="case-link-pill">Sample Instagram posts</a>
-            <a href="#" class="case-link-pill">Poster layout</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Google Drive docs section -->
-    <section id="docs" aria-labelledby="docs-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="docs-heading">Documents (Google Drive)</h2>
-          <p>
-            Public-safe documents, translation samples, and briefs are organized in this Google Drive folder.
-            You can browse or open items in a new tab.
-          </p>
-        </div>
-
-        <!-- This iframe shows your shared Drive folder -->
-        <iframe
-          src="https://drive.google.com/embeddedfolderview?id=1ilmWrH4HcGjcU1ujFeOS-VyFFb9e1XD1#list"
-          style="width: 100%; height: 500px;"
-          title="Project documents folder on Google Drive">
-        </iframe>
-      </div>
-    </section>
-
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact-heading">
       <div class="container">
@@ -1376,6 +841,66 @@
       </div>
     </section>
   </main>
+    /* Contact */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+    }
+
+    .contact-body {
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .contact-body a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    form[aria-label="Contact form"] {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.4rem 1.6rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      font-size: 0.9rem;
+    }
+
+    form[aria-label="Contact form"] label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+
+    form[aria-label="Contact form"] input,
+    form[aria-label="Contact form"] textarea {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.6rem;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.9rem;
+      resize: vertical;
+      min-height: 40px;
+    }
+
+    form[aria-label="Contact form"] input:focus-visible,
+    form[aria-label="Contact form"] textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-color: var(--accent);
+    }
+
+    form[aria-label="Contact form"] textarea {
+      min-height: 110px;
+    }
 
   <!-- Footer -->
   <footer>
@@ -1392,26 +917,6 @@
     </div>
   </footer>
 
-  <script>
-    // Simple work filter
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const workCards = document.querySelectorAll("#work .project-card");
-
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const filter = btn.dataset.filter;
-
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        workCards.forEach((card) => {
-          const categories = (card.dataset.category || "").split(" ");
-          const show = filter === "all" || categories.includes(filter);
-          card.style.display = show ? "" : "none";
-        });
-      });
-    });
-  </script>
 </body>
 </html>
 
