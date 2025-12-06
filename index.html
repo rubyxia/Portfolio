@@ -148,10 +148,10 @@
         grid-template-columns: minmax(0, 1fr);
         align-items: center;
       }
-      
-      /* Optional: keep the text from getting TOO wide on big screens */
+
       .hero-layout > div {
-        max-width: 720px;
+        max-width: 880px;
+        margin: 0 auto;      /* centers the hero content */
       }
 
     .hero-kicker {
@@ -172,7 +172,8 @@
     .hero-subline {
       font-size: 1rem;
       color: var(--muted);
-      max-width: 36rem;
+      /* remove or increase this max-width if you want it wider */
+      /* max-width: 44rem; */
       margin-bottom: 1.5rem;
     }
 
@@ -304,22 +305,22 @@
 
     .section-heading {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      flex-direction: column;     /* stack title + text */
+      align-items: flex-start;    /* left-align everything */
+      gap: 0.3rem;
+      margin-bottom: 1.1rem;
     }
-
+    
     .section-heading h2 {
       margin: 0;
       font-size: 1.5rem;
     }
-
+    
     .section-heading p {
       margin: 0;
       font-size: 0.9rem;
       color: var(--muted);
-      max-width: 30rem;
+      max-width: 40rem;           /* slightly wider and under the title */
     }
 
     /* Featured Projects */
