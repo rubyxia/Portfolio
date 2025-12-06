@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title> Ruby Xia — Portfolio</title>
+  <title>Ruby Xia — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ziyu (Ruby) Xia — trilingual communication and research support. I create clear materials in Japanese, English, and Chinese, including localization, briefing decks, and simple data visuals." />
+  <meta name="description" content="Ruby Xia — trilingual communication and research support. I create clear materials in Japanese, English, and Chinese, including localization, briefing decks, and simple data visuals." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
-
 
   <style>
     :root {
@@ -42,6 +41,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+
     h1, h2, h3, .hero-title, .section-title, .page-hero-title {
       font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       letter-spacing: 0.01em;
@@ -111,31 +111,9 @@
       transition: width var(--transition-fast);
     }
 
-    .nav-links a:focus-visible,
-    .nav-links a:hover {
-      outline: none;
-    }
-
     .nav-links a:hover::after,
     .nav-links a:focus-visible::after {
       width: 100%;
-    }
-
-    .nav-resume {
-      padding: 0.35rem 0.9rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 36px;
-    }
-
-    .nav-resume:hover,
-    .nav-resume:focus-visible {
-      background: var(--accent-soft);
     }
 
     /* Hero */
@@ -149,15 +127,15 @@
     }
 
     .hero-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        align-items: center;
-      }
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      align-items: center;
+    }
 
-      .hero-layout > div {
-        max-width: 880px;
-        margin: 0 auto;      /* centers the hero content */
-      }
+    .hero-layout > div {
+      max-width: 880px;
+      margin: 0 auto;
+    }
 
     .hero-kicker {
       font-size: 0.85rem;
@@ -177,8 +155,6 @@
     .hero-subline {
       font-size: 1rem;
       color: var(--muted);
-      /* remove or increase this max-width if you want it wider */
-      /* max-width: 44rem; */
       margin-bottom: 1.5rem;
     }
 
@@ -200,7 +176,12 @@
       border: 1px solid transparent;
       cursor: pointer;
       min-height: 44px;
-      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      transition:
+        background var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
     }
 
     .btn-primary {
@@ -239,65 +220,6 @@
       font-weight: 500;
     }
 
-    .hero-card {
-      background: var(--bg-elevated);
-      border-radius: var(--radius-xl);
-      padding: 1.75rem 1.75rem 1.5rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .hero-card h2 {
-      font-size: 1rem;
-      margin: 0 0 0.4rem;
-    }
-
-    .hero-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-    }
-
-    .chip {
-      padding: 0.22rem 0.7rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border);
-      background: #f3f4f6;
-      color: #4b5563;
-      white-space: nowrap;
-    }
-
-    .chip-accent {
-      border-color: rgba(37,99,235,0.2);
-      background: #eff6ff;
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    .small-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .mini-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .mini-list li + li {
-      margin-top: 0.25rem;
-    }
-
     /* Sections */
 
     section {
@@ -310,17 +232,17 @@
 
     .section-heading {
       display: flex;
-      flex-direction: column;     /* stack title + text */
-      align-items: flex-start;    /* left-align everything */
+      flex-direction: column;
+      align-items: flex-start;
       gap: 0.3rem;
       margin-bottom: 1.1rem;
     }
-    
+
     .section-heading h2 {
       margin: 0;
       font-size: 1.5rem;
     }
-    
+
     .section-heading p {
       margin: 0;
       font-size: 0.9rem;
@@ -344,7 +266,10 @@
       display: flex;
       flex-direction: column;
       gap: 0.55rem;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
     }
 
     .project-card:hover,
@@ -432,189 +357,114 @@
       color: #1f2937;
     }
 
-   /* About */
+    /* About */
 
     #about .about-body {
-      max-width: none;           /* let it use the full container width */
       font-size: 0.95rem;
       color: #374151;
+      max-width: 48rem;
     }
 
     #about .about-body p {
       margin-top: 0;
     }
 
-    /* Work / project lineup */
+    /* Contact */
 
-    #work .project-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-      font-size: 0.9rem;
-    }
-
-    .filter-btn {
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border);
-      background: #ffffff;
-      padding: 0.35rem 0.9rem;
-      cursor: pointer;
-      font-size: 0.85rem;
-      color: var(--muted);
-      min-height: 34px;
-      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
-    }
-
-    .filter-btn.active {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--accent);
-    }
-
-    .filter-btn:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-
-    .work-grid {
+    .contact-layout {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+      margin-top: 0.5rem;
     }
 
-    .project-card.full {
-      min-height: 0;
+    .contact-body p {
+      font-size: 0.9rem;
+      color: #374151;
     }
 
-    /* Case study template */
-
-    #case-template .template-note {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
-
-    .case-study {
+    form[aria-label="Contact form"] {
       background: var(--bg-elevated);
       border-radius: var(--radius-lg);
-      padding: 1.5rem 1.4rem 1.6rem;
+      padding: 1.2rem 1.25rem 1.3rem;
+      box-shadow: var(--shadow-soft);
       border: 1px solid rgba(226,232,240,0.9);
-      box-shadow: 0 8px 22px rgba(15,23,42,0.04);
-      margin-bottom: 1.25rem;
-    }
-
-    .case-header-top {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.6rem;
+      flex-direction: column;
+      gap: 0.9rem;
     }
 
-    .case-title {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .case-meta {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-top: 0.3rem;
-      font-size: 0.8rem;
-    }
-
-    .case-tag {
-      padding: 0.15rem 0.6rem;
-      border-radius: var(--radius-pill);
-      background: #eff6ff;
-      color: var(--accent);
-    }
-
-    .quick-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.86rem;
-      margin: 0.3rem 0 1rem;
-      padding: 0;
-    }
-
-    .quick-stats div span {
+    form[aria-label="Contact form"] label {
       display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
     }
 
-    .quick-label {
-      font-size: 0.75rem;
+    form[aria-label="Contact form"] input,
+    form[aria-label="Contact form"] textarea {
+      width: 100%;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 0.7rem 0.85rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    form[aria-label="Contact form"] input:focus-visible,
+    form[aria-label="Contact form"] textarea:focus-visible {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-soft);
+      background: #ffffff;
+    }
+
+    form[aria-label="Contact form"] textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    /* Legal notes */
+
+    .legal-notes {
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(248, 249, 252, 0.95);
+      padding: 1.5rem 0 1.75rem;
+    }
+
+    .legal-title {
+      margin: 0 0 0.6rem;
+      font-size: 0.95rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
+      letter-spacing: 0.12em;
+      color: #6b7280;
     }
 
-    .quick-value {
-      font-weight: 500;
-    }
-
-    .case-section-title {
-      font-size: 0.92rem;
-      margin: 0.9rem 0 0.25rem;
-      font-weight: 600;
-    }
-
-    .case-section-body {
-      font-size: 0.88rem;
-      color: #374151;
-      margin: 0;
-    }
-
-    .case-section-body ul {
-      margin: 0.25rem 0 0.25rem 1.1rem;
-      padding-left: 0.75rem;
-    }
-
-    .case-section-body li {
-      margin-bottom: 0.15rem;
-    }
-
-    .case-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.4rem;
-      font-size: 0.86rem;
-    }
-
-    .case-link-pill {
-      padding: 0.35rem 0.85rem;
-      border-radius: var(--radius-pill);
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      color: var(--accent);
-      font-weight: 500;
+    .legal-text {
+      margin: 0.15rem 0;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: #6b7280;
+      max-width: 50rem;
     }
 
     /* Footer */
 
-        footer {
+    footer {
       border-top: 1px solid var(--border);
       padding: 1.4rem 0 1.7rem;
       font-size: 0.85rem;
       color: var(--muted);
     }
-    
-    .footer-row,
-    .footer-inner {
+
+    .footer-row {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
     }
-    
+
     .footer-top {
       display: flex;
       flex-wrap: wrap;
@@ -622,7 +472,7 @@
       align-items: center;
       gap: 0.75rem;
     }
-    
+
     .footer-main,
     .footer-links {
       display: flex;
@@ -630,35 +480,30 @@
       align-items: center;
       gap: 0.4rem;
     }
-    
+
     .footer-main a,
     .footer-links a {
       color: var(--accent);
       font-weight: 500;
     }
-    
+
     .footer-dot {
       opacity: 0.5;
     }
-    
+
     .footer-accessibility {
       font-size: 0.78rem;
       color: var(--muted);
     }
+
     /* Responsive */
 
     @media (max-width: 960px) {
-      .hero-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
       #hero {
         padding-top: 2.5rem;
       }
       .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .work-grid {
-        grid-template-columns: minmax(0, 1fr);
       }
       .contact-layout {
         grid-template-columns: minmax(0, 1fr);
@@ -677,28 +522,6 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
-    /* Legal notes */
-    .legal-notes {
-      border-top: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(248, 249, 252, 0.95);
-      padding: 1.5rem 0 1.75rem;
-      margin-top: 1.5rem;
-    }
-    
-    .legal-title {
-      margin: 0 0 0.6rem;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #6b7280;
-    }
-    
-    .legal-text {
-      margin: 0.15rem 0;
-      font-size: 0.8rem;
-      line-height: 1.5;
-      color: #6b7280;
-    }
   </style>
 </head>
 <body>
@@ -706,9 +529,9 @@
     <div class="container nav">
       <a href="#hero" class="logo">Ruby Xia</a>
       <nav class="nav-links" aria-label="Primary">
-      <a href="#hero">Home</a>
-      <a href="work.html">Work</a>
-      <a href="#contact">Contact</a>
+        <a href="#hero">Home</a>
+        <a href="work.html">Work</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -718,17 +541,15 @@
     <section id="hero" aria-labelledby="hero-title">
       <div class="container hero-layout">
         <div>
-          <div class="hero-kicker">Trilingual communication & localization</div>
-          <h1 class="hero-title" id="hero-title">
-  Ruby Xia
-</h1>
+          <div class="hero-kicker">Trilingual communication &amp; localization</div>
+          <h1 class="hero-title" id="hero-title">Ruby Xia</h1>
           <p class="hero-subline">
-             I translate complex ideas into clear materials—briefing decks, bilingual documents, and simple data-backed visuals—across Japanese · English · Chinese, with organized workflows and measurable outcomes.
+            I translate complex ideas into clear materials—briefing decks, bilingual documents, and simple data-backed visuals—across Japanese · English · Chinese, with organized workflows and measurable outcomes.
           </p>
-         <div class="hero-ctas">
-          <a href="work.html" class="btn btn-primary">View Work</a>
-          <a href="#contact" class="btn btn-ghost">Contact</a>
-        </div>
+          <div class="hero-ctas">
+            <a href="work.html" class="btn btn-primary">View Work</a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
           <div class="hero-meta">
             <strong>Currently:</strong> Undergraduate at the University of Washington, based in Seattle. Focused on marketing, localization, and data visualization.
           </div>
@@ -736,7 +557,7 @@
       </div>
     </section>
 
-    <!-- Featured projects (3 tiles) -->
+    <!-- Featured projects -->
     <section id="featured" aria-labelledby="featured-heading">
       <div class="container">
         <div class="section-heading">
@@ -750,21 +571,19 @@
             <div class="project-eyebrow">Marketing · Strategy · Presentation</div>
             <h3 class="project-title">AMA Case Competition — Singapore Airlines</h3>
             <p class="project-hook">Built a multi-channel launch plan with a KPI framework and five-year outlook.</p>
-            <p class="project-summary">
-              Synthesized research, modeled scenarios, and presented to judges.
-            </p>
+            <p class="project-summary">Synthesized research, modeled scenarios, and presented to judges.</p>
             <div class="project-tags" aria-label="Tags">
               <span class="project-tag">Marketing</span>
               <span class="project-tag">Strategy</span>
               <span class="project-tag">KPI Framework</span>
             </div>
             <span class="featured-pill">Featured</span>
-            <a href="#case-ama" class="project-footer-link">
+            <a href="work.html#ama-case" class="project-footer-link">
               View case study <span aria-hidden="true">↗</span>
             </a>
           </article>
 
-          <!-- EN↔JP Technical Localization -->
+          <!-- Localization -->
           <article class="project-card" data-category="localization">
             <div class="project-eyebrow">Localization · Regulated Content</div>
             <h3 class="project-title">EN↔JP Technical Localization — Derived Samples</h3>
@@ -778,7 +597,7 @@
               <span class="project-tag">Technical</span>
             </div>
             <span class="featured-pill">Featured</span>
-            <a href="#case-localization" class="project-footer-link">
+            <a href="work.html#localization-case" class="project-footer-link">
               View case study <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -797,7 +616,7 @@
               <span class="project-tag">Quarto</span>
             </div>
             <span class="featured-pill">Featured</span>
-            <a href="#case-info201" class="project-footer-link">
+            <a href="work.html#info201-case" class="project-footer-link">
               View case study <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -836,12 +655,15 @@
         </div>
         <div class="about-body">
           <p>
-            I am a trilingual undergraduate at the University of Washington based in Seattle. I support client-facing materials and research with clear writing, localization, and organized handoffs. My focus is accuracy, readability, and measurable results.
+            I am a trilingual undergraduate at the University of Washington based in Seattle. I support client-facing materials and
+            research with clear writing, localization, and organized handoffs. My focus is accuracy, readability, and measurable results.
           </p>
           <p>
-            I support proposal-style materials, event documentation, and concise research with trilingual communication. My work emphasizes accuracy, readability, and organized handoffs.
+            I support proposal-style materials, event documentation, and concise research with trilingual communication. My work emphasizes
+            accuracy, readability, and organized handoffs.
           </p>
         </div>
+      </div>
     </section>
 
     <!-- Contact -->
@@ -854,7 +676,8 @@
         <div class="contact-layout">
           <div class="contact-body">
             <p>
-              Email me at <a href="mailto:rubyxia369@gmail.com">rubyxia369@gmail.com</a>
+              Email me at
+              <a href="mailto:rubyxia369@gmail.com">rubyxia369@gmail.com</a>
               or connect on
               <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>.
             </p>
@@ -882,83 +705,27 @@
       </div>
     </section>
   </main>
-    <section class="legal-notes">
-      <div class="container">
-        <h2 class="legal-title">Legal &amp; notes</h2>
-        <p class="legal-text">
-          This portfolio is for personal, non-commercial use and demonstration only.
-          Case studies are based on coursework, competitions, and self-initiated projects.
-          Some details may be simplified or combined to protect confidentiality.
-        </p>
-        <p class="legal-text">
-          Any clinical, laboratory, or health-related content is illustrative and must not be used as medical advice
-          or to interpret test results. Opinions expressed are my own and do not represent the University of Washington,
-          SpectraCell Laboratories, or any past collaborators.
-        </p>
-        <p class="legal-text">
-          All trademarks, logos, and brand names are the property of their respective owners.
-        </p>
-      </div>
-    </section>
-  /* Contact */
 
-    .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 1.75rem;
-      align-items: flex-start;
-      margin-top: 0.5rem;
-    }
-    
-    .contact-body p {
-      font-size: 0.9rem;
-      color: #374151;
-    }
-    
-    form[aria-label="Contact form"] {
-      background: var(--bg-elevated);
-      border-radius: var(--radius-lg);
-      padding: 1.2rem 1.25rem 1.3rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(226,232,240,0.9);
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-    
-    form[aria-label="Contact form"] label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 500;
-      margin-bottom: 0.2rem;
-    }
-    
-    form[aria-label="Contact form"] input,
-    form[aria-label="Contact form"] textarea {
-      width: 100%;
-      border-radius: 0.75rem;
-      border: 1px solid var(--border);
-      padding: 0.55rem 0.75rem;
-      font-family: inherit;
-      font-size: 0.9rem;
-      transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
-    }
-    
-    form[aria-label="Contact form"] input:focus-visible,
-    form[aria-label="Contact form"] textarea:focus-visible {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent-soft);
-      background: #ffffff;
-    }
-    
-    form[aria-label="Contact form"] textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
+  <!-- Legal notes -->
+  <section class="legal-notes">
+    <div class="container">
+      <h2 class="legal-title">Legal &amp; notes</h2>
+      <p class="legal-text">
+        This portfolio is for personal, non-commercial use and demonstration only. Case studies are based on coursework,
+        competitions, and self-initiated projects. Some details may be simplified or combined to protect confidentiality.
+      </p>
+      <p class="legal-text">
+        Any clinical, laboratory, or health-related content is illustrative and must not be used as medical advice or to interpret
+        test results. Opinions expressed are my own and do not represent the University of Washington, SpectraCell Laboratories,
+        or any past collaborators.
+      </p>
+      <p class="legal-text">
+        All trademarks, logos, and brand names are the property of their respective owners.
+      </p>
+    </div>
+  </section>
 
   <!-- Footer -->
-  
   <footer>
     <div class="container footer-row">
       <div class="footer-top">
