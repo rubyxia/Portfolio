@@ -664,6 +664,29 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
+    /* Legal notes */
+    .legal-notes {
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(248, 249, 252, 0.95);
+      padding: 1.5rem 0 1.75rem;
+      margin-top: 1.5rem;
+    }
+    
+    .legal-title {
+      margin: 0 0 0.6rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6b7280;
+    }
+    
+    .legal-text {
+      margin: 0.15rem 0;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: #6b7280;
+      max-width: 48rem;
+    }
   </style>
 </head>
 <body>
@@ -848,7 +871,24 @@
       </div>
     </section>
   </main>
-   
+    <section class="legal-notes">
+      <div class="container">
+        <h2 class="legal-title">Legal &amp; notes</h2>
+        <p class="legal-text">
+          This portfolio is for personal, non-commercial use and demonstration only.
+          Case studies are based on coursework, competitions, and self-initiated projects.
+          Some details may be simplified or combined to protect confidentiality.
+        </p>
+        <p class="legal-text">
+          Any clinical, laboratory, or health-related content is illustrative and must not be used as medical advice
+          or to interpret test results. Opinions expressed are my own and do not represent the University of Washington,
+          SpectraCell Laboratories, or any past collaborators.
+        </p>
+        <p class="legal-text">
+          All trademarks, logos, and brand names are the property of their respective owners.
+        </p>
+      </div>
+    </section>
   <!-- Footer -->
   <footer>
     <div class="container footer-row">
