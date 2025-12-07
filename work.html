@@ -137,11 +137,10 @@
     }
 
     .page-hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-      gap: 1.75rem;
-      align-items: flex-start;
+      display: block;           /* stack everything in one column */
+      max-width: 720px;         /* keeps lines from being super long */
     }
+
 
     .page-hero-title {
       font-size: 1.9rem;
@@ -163,12 +162,15 @@
 
     .page-hero-meta {
       font-size: 0.85rem;
-      color: var(--muted);
+      color: var(--text-muted);
       padding: 0.9rem 1rem;
       border-radius: var(--radius-lg);
       border: 1px dashed rgba(148,163,184,0.8);
       background: rgba(255,255,255,0.9);
+      margin-top: 1.1rem;    /* space away from the paragraph */
+      max-width: 32rem;      /* stops it from stretching too wide */
     }
+
 
     /* Sections */
 
