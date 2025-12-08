@@ -176,7 +176,47 @@
     .section {
       padding: 1.2rem 0 1.8rem;
     }
+    /* Hero → case-studies divider */
     
+    .section-divider {
+      padding: 0.5rem 0 1.2rem;
+    }
+    
+    .divider-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(148,163,184,0),
+        rgba(148,163,184,0.7),
+        rgba(148,163,184,0)
+      );
+    }
+    
+    .divider-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      border: 1px solid rgba(129,140,248,0.55);
+      font-size: 0.82rem;
+      color: #4338ca;
+      white-space: nowrap;
+    }
+    
+    .divider-icon {
+      font-size: 0.9rem;
+    }
+
     /* Stack title + description vertically, full width */
     .section-header {
       display: flex;
@@ -672,6 +712,19 @@
               Case sections below follow a consistent structure. Documents are linked through Google Drive where possible.
             </p>
           </div>
+        </div>
+      </section>
+    
+    <!-- Divider between hero and case studies -->
+    <section class="section-divider" aria-hidden="true">
+      <div class="container">
+        <div class="divider-inner">
+          <span class="divider-line"></span>
+          <div class="divider-pill">
+            <span class="divider-icon">✦</span>
+            <span> </span>
+          </div>
+          <span class="divider-line"></span>
         </div>
       </div>
     </section>
