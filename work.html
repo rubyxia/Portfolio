@@ -160,17 +160,16 @@
       font-size: 0.85rem;
     }
 
-    .page-hero-meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      padding: 0.9rem 1rem;
-      border-radius: var(--radius-lg);
-      border: 1px dashed rgba(148,163,184,0.8);
-      background: rgba(255,255,255,0.9);
-      margin-top: 1.1rem;    /* space away from the paragraph */
-      max-width: 32rem;      /* stops it from stretching too wide */
+        .page-hero-meta {
+      font-size: 0.82rem;
+      color: #9ca3af;             /* lighter grey */
+      padding: 0.4rem 0 0;
+      border-radius: 0;
+      border: none;
+      background: transparent;
+      margin-top: 0.7rem;
+      max-width: 32rem;
     }
-
 
     /* Sections */
 
@@ -295,6 +294,173 @@
       margin-right: 0.35rem;
       margin-bottom: 0.3rem;
     }
+    
+    /* Project preview grid (cards on the main work page) */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .project-card {
+      cursor: pointer;
+      border-radius: 18px;
+      background: var(--bg-elevated);
+      border: 1px solid rgba(226,232,240,0.9);
+      box-shadow: 0 10px 24px rgba(15,23,42,0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 160ms ease-out, box-shadow 160ms ease-out;
+    }
+    
+    .project-card:hover,
+    .project-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(15,23,42,0.12);
+    }
+    
+    .project-thumb {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+    }
+    
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .project-card-body {
+      padding: 0.85rem 1rem 1rem;
+    }
+    
+    .project-card-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    
+    .project-card-title {
+      font-size: 1rem;
+      margin: 0 0 0.25rem;
+    }
+    
+    .project-card-hook {
+      font-size: 0.88rem;
+      margin: 0 0 0.5rem;
+      color: #4b5563;
+    }
+    
+    .project-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+  /* Reuse tag-pill look inside cards */
+    .project-card-tags .tag-pill {
+      padding: 0.12rem 0.6rem;
+    }
+
+  /* Pop-up modal for full case-studies */
+    .project-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15,23,42,0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    
+    .project-modal.active {
+      display: flex;
+    }
+    
+    .modal-inner {
+      background: #ffffff;
+      border-radius: 22px;
+      max-width: 900px;
+      width: min(900px, 96%);
+      max-height: 90vh;
+      padding: 1.4rem 1.6rem 1.6rem;
+      box-shadow: 0 20px 60px rgba(15,23,42,0.35);
+      overflow-y: auto;
+      position: relative;
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 0.7rem;
+      right: 1.1rem;
+      border: none;
+      background: none;
+      font-size: 1.8rem;
+      line-height: 1;
+      color: #9ca3af;
+      cursor: pointer;
+    }
+    
+    .modal-close:hover {
+      color: #4b5563;
+    }
+    
+    .modal-title {
+      margin: 0 0 0.3rem;
+      font-size: 1.35rem;
+    }
+    
+    .modal-meta {
+      margin: 0 0 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    
+    .modal-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 0.9rem;
+    }
+    
+    .modal-sections {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+    
+    .modal-block-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #4b5563;
+      margin: 0 0 0.3rem;
+    }
+    
+    .modal-sections p,
+    .modal-sections ul {
+      margin: 0 0 0.4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    
+    .modal-sections ul {
+      padding-left: 1.1rem;
+    }
+    
+    .modal-links {
+      margin-top: 0.4rem;
+      font-size: 0.86rem;
+    }
 
     /* UWiB visual */
 
@@ -336,14 +502,14 @@
     }
     /* softer, text-only meta beside the folder */
     .docs-meta {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       line-height: 1.6;
-      color: var(--text-muted);
+      color: #9ca3af;
     }
     
     .docs-note {
-      font-size: 0.9rem;
-      color: var(--text-muted);
+      font-size: 0.86rem;
+      color: #9ca3af;
     }
 
     iframe.docs-frame {
@@ -518,298 +684,371 @@
       </div>
     </section>
 
-    <!-- CASE STUDIES -->
+        <!-- CASE STUDIES -->
     <section class="section" id="case-studies">
       <div class="container">
         <div class="section-header">
           <div>
             <div class="section-kicker">Case studies</div>
-            <h2 class="section-title">How I frame each project</h2>
+            <h2 class="section-title">Selected projects</h2>
           </div>
           <p class="section-subtitle">
-            Each case uses the same structure: context, contribution, process, result, reflection, and links.
+            Each project is summarized below. Click a card to open a detailed case study in a pop-up without leaving this page.
           </p>
         </div>
 
-        <!-- AMA CASE -->
-        <article id="ama-case" class="case-section" aria-labelledby="ama-title">
-          <h3 id="ama-title" class="case-title">AMA Case Competition — Singapore Airlines</h3>
-          <p class="case-meta-line">Role: Strategy &amp; slides · Year: 2024 · Tags: Marketing, Strategy, Presentation</p>
-          <div class="case-tags">
-            <span class="tag-pill">Marketing</span>
-            <span class="tag-pill">Strategy</span>
-            <span class="tag-pill">KPI framework</span>
-          </div>
-          <div class="case-grid">
-            <div class="case-block">
-              <h4 class="case-block-title">Context</h4>
-              <p>
-                Undergraduate case competition focused on Singapore Airlines. Our team was asked to propose a multi-channel marketing plan
-                that could drive growth over a five-year horizon while staying aligned with brand positioning and financial constraints.
-              </p>
-              <p>
-                We needed a structured launch plan with clear KPIs, realistic assumptions, and a narrative that could be delivered in a short
-                live presentation to judges.
-              </p>
+        <!-- Preview grid -->
+        <div class="projects-grid">
+          <!-- AMA -->
+          <article class="project-card" data-project="ama">
+            <div class="project-thumb">
+              <img src="https://drive.google.com/thumbnail?id=REPLACE_WITH_AMA_FILE_ID"
+                   alt="Preview slide from AMA Singapore Airlines deck">
             </div>
-            <div class="case-block">
-              <h4 class="case-block-title">My contribution</h4>
-              <ul>
-                <li>Synthesized market and competitor research into a concise strategy direction.</li>
-                <li>Built a KPI framework and five-year outlook with basic financial projections and scenario checks.</li>
-                <li>Authored the executive slides and presented the recommendation to judges.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Process</h4>
-              <ul>
-                <li><strong>Research:</strong> Collected secondary data on routes, customer segments, and competitor campaigns.</li>
-                <li><strong>Synthesis:</strong> Narrowed options to a focused set of initiatives with clear audiences and channels.</li>
-                <li><strong>Strategy &amp; design:</strong> Translated the plan into a phased roadmap, KPI table, and financial snapshot.</li>
-                <li><strong>Validation &amp; delivery:</strong> Checked feasibility against budget and timing; rehearsed and delivered the pitch.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Result &amp; reflection</h4>
-              <p>
-                Produced a cohesive slide deck and live presentation that tied goals, tactics, and KPIs together. Even without formal competition
-                metrics, the project strengthened my ability to scope assumptions and communicate trade-offs clearly.
+            <div class="project-card-body">
+              <div class="project-card-eyebrow">Marketing · Strategy · Presentation</div>
+              <h3 class="project-card-title">AMA Case Competition — Singapore Airlines</h3>
+              <p class="project-card-hook">
+                Multi-channel launch plan with KPI framework and five-year outlook.
               </p>
-              <p>
-                Next time I would deepen the sensitivity analysis on key metrics and bring in more visual storytelling for the financials.
-              </p>
-              <div class="case-links">
-                <span class="link-pill">Slides excerpt (PDF) — see Google Drive</span>
+              <div class="project-card-tags">
+                <span class="tag-pill">Marketing</span>
+                <span class="tag-pill">Strategy</span>
+                <span class="tag-pill">KPI framework</span>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- LOCALIZATION CASE -->
-        <article id="localization-case" class="case-section" aria-labelledby="loc-title">
-          <h3 id="loc-title" class="case-title">EN↔JP Technical Localization — Derived Samples</h3>
-          <p class="case-meta-line">Role: Translator &amp; reviewer · Tags: Localization, Regulated content, JP·EN·ZH</p>
-          <div class="case-tags">
-            <span class="tag-pill">Localization</span>
-            <span class="tag-pill">Clinical/technical</span>
-            <span class="tag-pill">Japanese</span>
-          </div>
-          <div class="case-grid">
-            <div class="case-block">
-              <h4 class="case-block-title">Context</h4>
-              <p>
-                To demonstrate readiness for internship-level localization work, I created paraphrased translation samples that mimic clinical
-                and technical documents without using proprietary material.
-              </p>
-              <p>
-                The goal was to balance accuracy, naturalness, and consistency while aligning closely with terminology used in Japanese
-                medical and scientific communication.
-              </p>
+          <!-- Localization -->
+          <article class="project-card" data-project="localization">
+            <div class="project-thumb">
+              <img src="https://drive.google.com/thumbnail?id=REPLACE_WITH_LOCALIZATION_FILE_ID"
+                   alt="Preview of EN↔JP technical localization sample">
             </div>
-            <div class="case-block">
-              <h4 class="case-block-title">My contribution</h4>
-              <ul>
-                <li>Produced paraphrased JP translations imitating clinical and technical content.</li>
-                <li>Created a mini glossary and style notes to keep terminology consistent.</li>
-                <li>Documented translation choices and edge cases for future reference.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Process</h4>
-              <ul>
-                <li><strong>Research:</strong> Reviewed reference materials and official terminology sources in Japanese.</li>
-                <li><strong>Synthesis:</strong> Identified recurring patterns in how technical concepts are conveyed.</li>
-                <li><strong>Localization:</strong> Drafted EN↔JP samples, refining tone and register to sound natural yet precise.</li>
-                <li><strong>Validation:</strong> Re-read for consistency and alignment with the glossary, adjusting ambiguous phrases.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Result &amp; reflection</h4>
-              <p>
-                Built a small but representative set of samples that show how I handle technical concepts in Japanese while preserving
-                meaning from the English. The work also clarified which resources and checks are most useful when working under time pressure.
+            <div class="project-card-body">
+              <div class="project-card-eyebrow">Localization · Regulated content</div>
+              <h3 class="project-card-title">EN↔JP Technical Localization — Derived Samples</h3>
+              <p class="project-card-hook">
+                Technical materials localized to natural, professional Japanese.
               </p>
-              <p>
-                Going forward, I would add more examples that mix narrative explanations with numeric data and tables.
-              </p>
-              <div class="case-links">
-                <span class="link-pill">Translation samples PDF — Google Drive</span>
+              <div class="project-card-tags">
+                <span class="tag-pill">Localization</span>
+                <span class="tag-pill">Clinical/technical</span>
+                <span class="tag-pill">JP·EN</span>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- KING COUNTY CASE -->
-        <article id="king-county-case" class="case-section" aria-labelledby="kc-title">
-          <h3 id="kc-title" class="case-title">King County Market Analysis — Real-Estate Brief</h3>
-          <p class="case-meta-line">Role: Lead analyst · Tags: Research, Analytics, Real estate</p>
-          <div class="case-tags">
-            <span class="tag-pill">Research</span>
-            <span class="tag-pill">Analytics</span>
-            <span class="tag-pill">Brief</span>
-          </div>
-          <div class="case-grid">
-            <div class="case-block">
-              <h4 class="case-block-title">Context</h4>
-              <p>
-                Course project framing a hypothetical $100M investment in the King County / Bellevue area. We were asked to assess market
-                conditions, identify risks, and recommend a direction with support from public data and industry commentary.
-              </p>
-              <p>
-                The deliverable was a concise written brief aimed at stakeholders who needed a clear, risk-aware recommendation.
-              </p>
+          <!-- King County -->
+          <article class="project-card" data-project="king">
+            <div class="project-thumb">
+              <img src="https://drive.google.com/thumbnail?id=REPLACE_WITH_KING_COUNTY_FILE_ID"
+                   alt="Preview of King County market analysis brief">
             </div>
-            <div class="case-block">
-              <h4 class="case-block-title">My contribution</h4>
-              <ul>
-                <li>Collected public records, broker reports, and news sources on supply, demand, and pricing.</li>
-                <li>Modeled simple demand/supply scenarios and highlighted key risk factors.</li>
-                <li>Drafted a risk-adjusted recommendation with citations and rationale.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Process</h4>
-              <ul>
-                <li><strong>Research:</strong> Compiled data on vacancy rates, pipeline, and demographic trends.</li>
-                <li><strong>Synthesis:</strong> Grouped risks into categories (market, financial, operational) and estimated impact.</li>
-                <li><strong>Strategy:</strong> Positioned a recommended asset type and timing based on those scenarios.</li>
-                <li><strong>Delivery:</strong> Wrote a brief that highlighted assumptions, risks, and next steps for due diligence.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Result &amp; reflection</h4>
-              <p>
-                The memo presented a structured, evidence-backed recommendation and made uncertainties explicit instead of hiding them.
-                It also showed how non-technical audiences can still be walked through data-driven reasoning.
+            <div class="project-card-body">
+              <div class="project-card-eyebrow">Research · Analytics</div>
+              <h3 class="project-card-title">King County Market Analysis — Real-Estate Brief</h3>
+              <p class="project-card-hook">
+                $100M hypothetical investment brief with risk analysis.
               </p>
-              <p>
-                Next time I would add more visuals, such as a simple risk matrix and scenario comparison charts.
-              </p>
-              <div class="case-links">
-                <span class="link-pill">Market brief excerpt — Google Drive</span>
+              <div class="project-card-tags">
+                <span class="tag-pill">Research</span>
+                <span class="tag-pill">Analytics</span>
+                <span class="tag-pill">Real estate</span>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- INFO 201 CASE -->
-        <article id="info201-case" class="case-section" aria-labelledby="info-title">
-          <h3 id="info-title" class="case-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h3>
-          <p class="case-meta-line">Role: Analyst &amp; author · Tags: Data, Visualization, R, Quarto</p>
-          <div class="case-tags">
-            <span class="tag-pill">Data</span>
-            <span class="tag-pill">Visualization</span>
-            <span class="tag-pill">R</span>
-          </div>
-          <div class="case-grid">
-            <div class="case-block">
-              <h4 class="case-block-title">Context</h4>
-              <p>
-                INFO 201 focused on cleaning, transforming, and visualizing public datasets in R, then communicating findings through Quarto
-                reports that remain reproducible.
-              </p>
-              <p>
-                The goal was not advanced modeling, but clear data pipelines, labeled charts, and transparent assumptions.
-              </p>
+          <!-- INFO 201 -->
+          <article class="project-card" data-project="info201">
+            <div class="project-thumb">
+              <img src="https://drive.google.com/thumbnail?id=REPLACE_WITH_INFO201_FILE_ID"
+                   alt="Preview of INFO 201 Quarto report">
             </div>
-            <div class="case-block">
-              <h4 class="case-block-title">My contribution</h4>
-              <ul>
-                <li>Cleaned data with <code>dplyr</code> and related R packages.</li>
-                <li>Created charts in <code>ggplot2</code> with clear labels and captions.</li>
-                <li>Authored the Quarto narrative and ensured the report was reproducible.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Process</h4>
-              <ul>
-                <li><strong>Data cleaning:</strong> Tidied raw data, handled missing values, and created derived variables.</li>
-                <li><strong>Visualization:</strong> Designed charts that matched the questions being asked instead of overcomplicating them.</li>
-                <li><strong>Communication:</strong> Wrote narrative text that avoided causal claims and explained limitations.</li>
-                <li><strong>Reproducibility:</strong> Organized code chunks and parameters so the report can be re-run on demand.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Result &amp; reflection</h4>
-              <p>
-                The report provided a simple but transparent data story. It also made me more comfortable using R as a supporting tool for
-                communication, not as an identity.
+            <div class="project-card-body">
+              <div class="project-card-eyebrow">Data · Visualization</div>
+              <h3 class="project-card-title">INFO 201 — Data Analysis &amp; Visualization</h3>
+              <p class="project-card-hook">
+                Cleaned datasets and Quarto visuals for reproducible reports.
               </p>
-              <p>
-                Going forward, I would focus on choosing fewer, more impactful charts and adding short summaries for non-technical readers.
-              </p>
-              <div class="case-links">
-                <span class="link-pill">Quarto report excerpt — Google Drive</span>
+              <div class="project-card-tags">
+                <span class="tag-pill">Data</span>
+                <span class="tag-pill">Visualization</span>
+                <span class="tag-pill">R / Quarto</span>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- UWiB CASE -->
-        <article id="uwib-case" class="case-section" aria-labelledby="uwib-title">
-          <h3 id="uwib-title" class="case-title">UWiB Marketing — Social Graphics</h3>
-          <p class="case-meta-line">Role: Designer &amp; coordinator · Tags: Design, Content, Student org</p>
-          <div class="case-tags">
-            <span class="tag-pill">Design</span>
-            <span class="tag-pill">Content</span>
-            <span class="tag-pill">Community</span>
-          </div>
-
-          <!-- Visual from Google Drive -->
-          <figure class="case-media">
-            <iframe
-              class="case-media-frame"
-              src="https://drive.google.com/file/d/1KyKM_deE03TkdtXniaL6bNhIuamtLWO6/preview"
-              loading="lazy"
-              title="UWiB event flyer — sample social graphic"
-            ></iframe>
-            <figcaption>Sample event flyer created for University of Washington Women in Business.</figcaption>
-          </figure>
-
-          <div class="case-grid">
-            <div class="case-block">
-              <h4 class="case-block-title">Context</h4>
-              <p>
-                As part of University of Washington Women in Business (UWiB), I helped create event marketing materials that needed to be
-                concise, on-brand, and easy for busy students to understand at a glance.
-              </p>
-              <p>
-                The work included Instagram posts, story graphics, and simple posters, along with tracking opportunities and deadlines.
-              </p>
+          <!-- UWiB -->
+          <article class="project-card" data-project="uwib">
+            <div class="project-thumb">
+              <img src="https://drive.google.com/thumbnail?id=1KyKM_deE03TkdtXniaL6bNhIuamtLWO6"
+                   alt="Preview of UWiB event flyer graphic">
             </div>
-            <div class="case-block">
-              <h4 class="case-block-title">My contribution</h4>
-              <ul>
-                <li>Designed event flyers and short social posts aligned to UWiB’s tone and guidelines.</li>
-                <li>Maintained a deadlines and opportunities tracker to keep content on schedule.</li>
-                <li>Adjusted copy and layout to keep information clear in small spaces.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Process</h4>
-              <ul>
-                <li><strong>Briefing:</strong> Confirmed event details, target audience, and key message with organizers.</li>
-                <li><strong>Design:</strong> Built layouts in Canva that prioritized clarity and scannability.</li>
-                <li><strong>Iteration:</strong> Incorporated feedback and made quick adjustments to timing, wording, or emphasis.</li>
-                <li><strong>Coordination:</strong> Logged posts and deadlines so nothing was missed.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4 class="case-block-title">Result &amp; reflection</h4>
-              <p>
-                Produced a set of simple, readable graphics that supported UWiB events and highlighted opportunities for members.
+            <div class="project-card-body">
+              <div class="project-card-eyebrow">Design · Content</div>
+              <h3 class="project-card-title">UWiB Marketing — Social Graphics</h3>
+              <p class="project-card-hook">
+                Event promo designs that clarify information and boost visibility.
               </p>
-              <p>
-                In future work, I would like to experiment more with accessibility checks (contrast, alt text, and motion preferences).
-              </p>
-              <div class="case-links">
-                <span class="link-pill">Sample event flyer — Google Drive</span>
+              <div class="project-card-tags">
+                <span class="tag-pill">Design</span>
+                <span class="tag-pill">Content</span>
+                <span class="tag-pill">Student org</span>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
+
+    <!-- MODALS (full case studies) -->
+    <div class="project-modal" id="modal-ama">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close AMA case">&times;</button>
+        <h2 class="modal-title">AMA Case Competition — Singapore Airlines</h2>
+        <p class="modal-meta">Role: Strategy &amp; slides · Year: 2024</p>
+        <div class="modal-tags">
+          <span class="tag-pill">Marketing</span>
+          <span class="tag-pill">Strategy</span>
+          <span class="tag-pill">KPI framework</span>
+        </div>
+        <div class="modal-sections">
+          <div>
+            <h3 class="modal-block-title">Context</h3>
+            <p>
+              Undergraduate case competition focused on Singapore Airlines. Our team was asked to propose a
+              multi-channel marketing plan over five years, aligned with brand positioning and financial constraints.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">My contribution</h3>
+            <ul>
+              <li>Synthesized market and competitor research into a concise strategy direction.</li>
+              <li>Built a KPI framework and five-year outlook with basic financial projections.</li>
+              <li>Authored executive slides and presented the recommendation to judges.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Process</h3>
+            <ul>
+              <li><strong>Research:</strong> Collected secondary data on routes, customer segments, and competitor campaigns.</li>
+              <li><strong>Synthesis:</strong> Narrowed options to a focused set of initiatives with clear audiences and channels.</li>
+              <li><strong>Strategy &amp; design:</strong> Translated the plan into a phased roadmap, KPI table, and financial snapshot.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Result &amp; reflection</h3>
+            <p>
+              Produced a cohesive deck tying goals, tactics, and KPIs together. The project strengthened my ability to
+              scope assumptions and communicate trade-offs clearly.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Links &amp; assets</h3>
+            <div class="modal-links">
+              Slides excerpt (PDF) available in the Google Drive portfolio folder.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal" id="modal-localization">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close localization case">&times;</button>
+        <h2 class="modal-title">EN↔JP Technical Localization — Derived Samples</h2>
+        <p class="modal-meta">Role: Translator &amp; reviewer</p>
+        <div class="modal-tags">
+          <span class="tag-pill">Localization</span>
+          <span class="tag-pill">Clinical/technical</span>
+          <span class="tag-pill">JP·EN</span>
+        </div>
+        <div class="modal-sections">
+          <div>
+            <h3 class="modal-block-title">Context</h3>
+            <p>
+              To demonstrate readiness for internship-level localization work, I created paraphrased translation samples
+              that mimic clinical and technical documents without using proprietary material.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">My contribution</h3>
+            <ul>
+              <li>Produced paraphrased JP translations imitating clinical and technical content.</li>
+              <li>Created a mini glossary and style notes for consistent terminology.</li>
+              <li>Documented translation choices and edge cases for future reference.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Process</h3>
+            <ul>
+              <li><strong>Research:</strong> Reviewed reference materials and official terminology sources in Japanese.</li>
+              <li><strong>Synthesis:</strong> Identified patterns in how technical concepts are conveyed.</li>
+              <li><strong>Localization:</strong> Drafted EN↔JP samples, refining tone and register to be natural yet precise.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Result &amp; reflection</h3>
+            <p>
+              Built a small but representative set of samples that show how I handle technical concepts in Japanese while
+              preserving meaning from English.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Links &amp; assets</h3>
+            <div class="modal-links">
+              Translation samples PDF available in the Google Drive portfolio folder.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal" id="modal-king">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close King County case">&times;</button>
+        <h2 class="modal-title">King County Market Analysis — Real-Estate Brief</h2>
+        <p class="modal-meta">Role: Lead analyst</p>
+        <div class="modal-tags">
+          <span class="tag-pill">Research</span>
+          <span class="tag-pill">Analytics</span>
+          <span class="tag-pill">Real estate</span>
+        </div>
+        <div class="modal-sections">
+          <div>
+            <h3 class="modal-block-title">Context</h3>
+            <p>
+              Course project framing a hypothetical $100M investment in the King County / Bellevue area, assessing
+              market conditions, risks, and a recommended direction using public data and commentary.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">My contribution</h3>
+            <ul>
+              <li>Collected public records, broker reports, and news sources on supply, demand, and pricing.</li>
+              <li>Modeled simple demand/supply scenarios and highlighted key risk factors.</li>
+              <li>Drafted a risk-aware recommendation with citations and rationale.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Process</h3>
+            <ul>
+              <li><strong>Research:</strong> Compiled data on vacancy rates, pipeline, and demographic trends.</li>
+              <li><strong>Synthesis:</strong> Grouped risks into categories and estimated relative impact.</li>
+              <li><strong>Strategy:</strong> Positioned a recommended asset type and timing based on those scenarios.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Result &amp; reflection</h3>
+            <p>
+              The memo presented a structured, evidence-backed recommendation and made uncertainties explicit instead of
+              hiding them.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Links &amp; assets</h3>
+            <div class="modal-links">
+              Market brief excerpt available in the Google Drive portfolio folder.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal" id="modal-info201">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close INFO 201 case">&times;</button>
+        <h2 class="modal-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h2>
+        <p class="modal-meta">Role: Analyst &amp; author</p>
+        <div class="modal-tags">
+          <span class="tag-pill">Data</span>
+          <span class="tag-pill">Visualization</span>
+          <span class="tag-pill">R / Quarto</span>
+        </div>
+        <div class="modal-sections">
+          <div>
+            <h3 class="modal-block-title">Context</h3>
+            <p>
+              INFO 201 focused on cleaning, transforming, and visualizing public datasets in R, then communicating
+              findings through reproducible Quarto reports.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">My contribution</h3>
+            <ul>
+              <li>Cleaned data with <code>dplyr</code> and related packages.</li>
+              <li>Created charts in <code>ggplot2</code> with clear labels and captions.</li>
+              <li>Authored the Quarto narrative and ensured the report was reproducible.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Process</h3>
+            <ul>
+              <li><strong>Data cleaning:</strong> Tidied raw data, handled missing values, and created derived variables.</li>
+              <li><strong>Visualization:</strong> Chose charts that matched the questions instead of overcomplicating them.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Result &amp; reflection</h3>
+            <p>
+              The report provided a simple but transparent data story and made me more comfortable using R as a supporting
+              tool for communication.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Links &amp; assets</h3>
+            <div class="modal-links">
+              Quarto report excerpt and slides available in the Google Drive portfolio folder.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal" id="modal-uwib">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close UWiB case">&times;</button>
+        <h2 class="modal-title">UWiB Marketing — Social Graphics</h2>
+        <p class="modal-meta">Role: Designer &amp; coordinator</p>
+        <div class="modal-tags">
+          <span class="tag-pill">Design</span>
+          <span class="tag-pill">Content</span>
+          <span class="tag-pill">Student org</span>
+        </div>
+        <div class="modal-sections">
+          <div>
+            <h3 class="modal-block-title">Context</h3>
+            <p>
+              As part of University of Washington Women in Business (UWiB), I created event marketing materials that needed
+              to be concise, on-brand, and easy for busy students to understand at a glance.
+            </p>
+          </div>
+          <div>
+            <h3 class="modal-block-title">My contribution</h3>
+            <ul>
+              <li>Designed event flyers and short social posts aligned to UWiB’s tone and guidelines.</li>
+              <li>Maintained a deadlines and opportunities tracker to keep content on schedule.</li>
+              <li>Adjusted copy and layout to keep information clear in small spaces.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Process</h3>
+            <ul>
+              <li><strong>Briefing:</strong> Confirmed event details, audience, and key message with organizers.</li>
+              <li><strong>Design:</strong> Built layouts in Canva that prioritized clarity and scannability.</li>
+              <li><strong>Iteration:</strong> Incorporated feedback and made quick adjustments to timing or emphasis.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="modal-block-title">Links &amp; assets</h3>
+            <div class="modal-links">
+              Sample event flyer (10_Visual_Design_EventFlyer_RubyXia.pdf) shown in the Google Drive portfolio.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- DOCUMENTS SECTION -->
     <section class="section">
@@ -910,6 +1149,35 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Project card → modal logic
+    const cards = document.querySelectorAll('.project-card');
+    const modals = document.querySelectorAll('.project-modal');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-project');
+        const modal = document.getElementById('modal-' + key);
+        if (modal) modal.classList.add('active');
+      });
+    });
+
+    modals.forEach(modal => {
+      const closeBtn = modal.querySelector('.modal-close');
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          modal.classList.remove('active');
+        });
+      }
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>
+
