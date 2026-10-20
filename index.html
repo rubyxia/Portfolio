@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Ruby Xia — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ruby Xia — trilingual communication and research support. I create clear materials in Japanese, English, and Chinese, including localization, briefing decks, and simple data visuals." />
+  <meta name="description" content="Ruby Xia — portfolio of marketing strategy, localization, research, data storytelling, and video editing projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
@@ -251,7 +251,7 @@
       color: var(--muted);
     }
 
-    /* Selected Project Samples */
+    /* Featured Projects */
 
     .project-grid {
       display: grid;
@@ -539,6 +539,67 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
+
+    /* Video portfolio — two formats, two storytelling styles */
+    #videos { scroll-margin-top: 82px; }
+    .video-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .video-preview-card {
+      display: block;
+      overflow: hidden;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .video-preview-card:hover,
+    .video-preview-card:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.10);
+      outline-offset: 3px;
+    }
+    .video-preview-thumb {
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #e8eefb, #cbd9f7);
+    }
+    .video-preview-thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+    .video-preview-play {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      color: #fff;
+      background: rgba(15, 23, 42, 0.82);
+      border-radius: 50%;
+      font-size: 1.45rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    .video-preview-copy { padding: 1.1rem 1.25rem 1.3rem; }
+    .video-preview-copy h3 { margin: 0.2rem 0 0.4rem; font-size: 1.1rem; }
+    .video-preview-copy p { margin: 0 0 0.65rem; font-size: 0.92rem; color: #4b5563; }
+    .video-preview-type { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; }
+    .video-preview-link { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
+    @media (max-width: 720px) {
+      .video-preview-grid { grid-template-columns: 1fr; }
+    }
+
   </style>
 </head>
 <body>
@@ -574,30 +635,30 @@
         <div class="hero-ctas">
           <a href="myworks.html" class="btn btn-primary">View Work</a>
           <a href="#contact" class="btn btn-ghost">Contact</a>
-          <a href="Ruby_Xia_Resume_Primary.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
+          <a href="Ziyu_Xia_Resume_Primary.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
             View Résumé
           </a>
         </div>
         
         <div class="hero-meta">
-          <strong>Currently:</strong> University of Washington undergraduate expected to graduate in June 2027.
-          This portfolio highlights selected projects in marketing strategy, localization, research,
-          data visualization, and business communication.
+          <strong>Currently:</strong> University of Washington undergraduate expected to graduate in June 2027,
+          with experience in global marketing, EN↔JP localization, market research, data visualization,
+          and creative video editing.
         </div>
+      </div>
       </div>
     </section>
 
-    <!-- Selected Project Samples -->
+    <!-- Featured projects -->
     <section id="featured" aria-labelledby="featured-heading">
       <div class="container">
         <div class="section-heading">
-          <h2 id="featured-heading">Selected Project Samples</h2>
+          <h2 id="featured-heading">Featured projects</h2>
           <p>
-            <p>
-              Selected project samples that show how I turn research, strategy, and multilingual communication
-              into clear, presentation-ready materials.
-            </p>
+            Selected projects that connect directly to my résumé: global marketing, localization,
+            campaign strategy, event promotion, data analysis, and business communication.
           </p>
+        </div>
 
         <div class="project-grid">
           <!-- AMA Case Competition -->
@@ -660,7 +721,44 @@
         </div>
       </div>
     </section>
-    
+
+
+    <!-- Video editing & storytelling: project-first, not an employment history -->
+    <section id="videos" aria-labelledby="videos-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="videos-heading">Video editing &amp; storytelling</h2>
+          <p>Two editing styles: a research-led video essay and a short-form creative edit. Watch both with project notes on my Work page.</p>
+        </div>
+        <div class="video-preview-grid">
+          <a class="video-preview-card" href="myworks.html#video-editing" aria-label="Watch long-form video essay and view editing notes">
+            <div class="video-preview-thumb">
+              <img src="https://i.ytimg.com/vi/MM_9I_ruhL4/hqdefault.jpg" alt="Thumbnail of my long-form video essay" loading="lazy" />
+              <span class="video-preview-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="video-preview-copy">
+              <span class="video-preview-type">Long-form · Video essay</span>
+              <h3>Research video essay</h3>
+              <p>Building a clear narrative with visual sequencing and deliberate pacing.</p>
+              <span class="video-preview-link">Watch project ↗</span>
+            </div>
+          </a>
+          <a class="video-preview-card" href="myworks.html#video-editing" aria-label="Watch short-form travel comedy and view editing notes">
+            <div class="video-preview-thumb">
+              <img src="https://i.ytimg.com/vi/-b27MpLTLX4/hqdefault.jpg" alt="Thumbnail of my short-form creative edit" loading="lazy" />
+              <span class="video-preview-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="video-preview-copy">
+              <span class="video-preview-type">Short-form · Creative edit</span>
+              <h3>Travel comedy short</h3>
+              <p>Turning travel moments into a playful story through cuts, captions, and comic timing.</p>
+              <span class="video-preview-link">Watch project ↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills & tools -->
     <section id="skills" aria-labelledby="skills-heading">
       <div class="container">
@@ -684,6 +782,7 @@
           <span class="skill-pill">Excel / PowerPoint / Word</span>
           <span class="skill-pill">Canva / Figma</span>
           <span class="skill-pill">Adobe Premiere Pro</span>
+          <span class="skill-pill">Video Editing &amp; Storytelling</span>
           <span class="skill-pill">Adobe Photoshop</span>
           <span class="skill-pill">UX/UI Awareness</span>
         </div>
@@ -695,20 +794,17 @@
       <div class="container">
         <div class="section-heading">
           <h2 id="about-heading">About</h2>
-            <div class="about-body">
+        </div>
+        <div class="about-body">
             <p>
-              I am a trilingual University of Washington undergraduate interested in global marketing,
-              brand communication, localization, and data-informed storytelling. This portfolio focuses on
-              selected academic, case competition, and self-initiated projects that show how I organize ideas,
-              synthesize research, and communicate clearly across audiences.
+              I am a trilingual undergraduate at the University of Washington based in Seattle. I support client-facing materials and
+              research with clear writing, localization, and organized handoffs. My focus is accuracy, readability, and measurable results.
             </p>
-            
             <p>
-              My project work spans marketing strategy, EN↔JP technical localization samples,
-              data visualization with R and Quarto, real-estate market analysis, event templates,
-              and digital tool rollout planning. Across these projects, I focus on accuracy,
-              audience fit, clear structure, and polished presentation.
-            </p>
+              Recent coursework includes INFO 201 (Data Analysis &amp; Visualization), FIN 205 (Personal Financial Literacy),
+              R E 250 (Introduction to Real Estate), ACCTG 225 (Managerial Accounting), and MGMT 200 (Introduction to Law).
+              These projects have given me practice with R + Quarto reports, real-estate market briefs, finance assignments,
+              and clear business-style writing. My video projects add another dimension: visual storytelling and post-production.
             </p>
           </div>
       </div>
@@ -730,9 +826,7 @@
               <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>.
             </p>
             <p>
-              <p>
-                I am open to marketing, localization, research, and data-focused opportunities where clear communication and organized project work matter.
-              </p>
+              I am open to marketing, localization, and data-focused roles where clear communication and organized handoffs matter.
             </p>
           </div>
         <form
