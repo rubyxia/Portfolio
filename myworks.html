@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work – Ruby Xia — Portfolio</title>
 
-  <meta name="description" content="Work and case studies by Ruby Xia — trilingual communication, localization, and research support across Japanese, English, and Chinese." />
+  <meta name="description" content="Ruby Xia's selected work in marketing, localization, data storytelling, and video editing, including a video essay and a creative short." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -682,6 +682,64 @@
         padding-top: 1.1rem;
       }
     }
+
+    /* Video editing portfolio */
+    #video-editing { scroll-margin-top: 82px; }
+    .video-editing-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.85fr);
+      gap: 1.4rem;
+      align-items: start;
+    }
+    .video-editing-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      min-width: 0;
+    }
+    .video-frame-wrap {
+      background: #111827;
+      width: 100%;
+    }
+    .video-frame-wrap--wide { aspect-ratio: 16 / 9; }
+    .video-frame-wrap--short {
+      aspect-ratio: 9 / 16;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .video-frame-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-editing-copy { padding: 1rem 1.2rem 1.25rem; }
+    .video-editing-type {
+      display: block;
+      color: var(--accent);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .video-editing-copy h3 { margin: 0 0 0.5rem; font-size: 1.15rem; }
+    .video-editing-copy p, .video-editing-copy li {
+      color: #4b5563;
+      font-size: 0.91rem;
+      line-height: 1.65;
+    }
+    .video-editing-copy p { margin: 0 0 0.75rem; }
+    .video-editing-copy .video-role { font-size: 0.83rem; color: #6b7280; }
+    .video-editing-copy ul { margin: 0 0 0.8rem; padding-left: 1.2rem; }
+    .video-watch-link { display: inline-flex; gap: .3rem; color: var(--accent); font-weight: 600; font-size: .9rem; }
+    @media (max-width: 760px) {
+      .video-editing-grid { grid-template-columns: 1fr; }
+      .video-frame-wrap--short { max-width: 300px; }
+    }
+
   </style>
 </head>
 <body>
@@ -703,17 +761,18 @@
         <div class="page-hero-eyebrow">Work &amp; case studies</div>
         <div class="page-hero-layout">
           <div>
-            <h1 class="page-hero-title">Selected work across marketing, localization, and analytics.</h1>
+            <h1 class="page-hero-title">Selected work across research, marketing, localization, and video.</h1>
             <p class="page-hero-sub">
-              This page gathers my project case studies and public-safe documents.
-              Each project highlights clear outcomes, my role, and how I approached the work.
+              A collection of project case studies, video editing work, and public-safe documents.
+              Each project highlights my approach, creative decisions, and the final work.
             </p>
             <p class="page-hero-note">
               Case sections below follow a consistent structure. Documents are linked through Google Drive where possible.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     
     <!-- Divider between hero and case studies -->
     <section class="section-divider" aria-hidden="true">
@@ -725,6 +784,80 @@
             <span> </span>
           </div>
           <span class="divider-line"></span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Video Editing & Storytelling -->
+    <section class="section" id="video-editing" aria-labelledby="video-editing-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Creative work</div>
+            <h2 class="section-title" id="video-editing-heading">Video editing &amp; storytelling</h2>
+          </div>
+          <p class="section-subtitle">
+            Two projects showing different sides of my editing: research-based visual explanation and
+            fast-paced short-form storytelling. Videos play directly here, with links to view on YouTube.
+          </p>
+        </div>
+        <div class="video-editing-grid">
+          <article class="video-editing-card" aria-labelledby="essay-video-title">
+            <div class="video-frame-wrap video-frame-wrap--wide">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/MM_9I_ruhL4"
+                title="Research video essay edited by Ruby Xia"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-editing-copy">
+              <span class="video-editing-type">Long-form video · Video essay</span>
+              <h3 id="essay-video-title">Research video essay</h3>
+              <p class="video-role">Academic project · Video editing and storytelling</p>
+              <p>
+                A longer-form piece designed to make a research topic approachable through a coherent visual narrative.
+                It highlights how I structure information for a viewer rather than presenting it only as written text.
+              </p>
+              <ul>
+                <li><strong>Editing focus:</strong> narrative flow, sequencing, pace, and supporting visuals</li>
+                <li><strong>Creative approach:</strong> balancing explanation with viewer engagement</li>
+              </ul>
+              <a class="video-watch-link" href="https://youtu.be/MM_9I_ruhL4" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="video-editing-card" aria-labelledby="short-video-title">
+            <div class="video-frame-wrap video-frame-wrap--short">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/-b27MpLTLX4"
+                title="Short-form creative travel video edited by Ruby Xia"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="video-editing-copy">
+              <span class="video-editing-type">Short-form video · Creative editing</span>
+              <h3 id="short-video-title">Travel comedy short</h3>
+              <p class="video-role">Personal creative project · Editing and comedic storytelling</p>
+              <p>
+                A playful travel video that uses short-form pacing, captions, and humorous cutaways to bring
+                a lighthearted story together.
+              </p>
+              <ul>
+                <li><strong>Editing focus:</strong> comedic timing, visual references, and concise pacing</li>
+                <li><strong>Creative approach:</strong> turning everyday footage into a shareable narrative</li>
+              </ul>
+              <a class="video-watch-link" href="https://www.youtube.com/shorts/-b27MpLTLX4" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1224,6 +1357,7 @@
           ></iframe>
         </div>
       </div>
+    </div>
     </div>
     <!-- Appointment booking rollout modal -->
     <div class="project-modal" id="modal-appointment">
