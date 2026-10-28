@@ -1,17 +1,15 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work – Ruby Xia — Portfolio</title>
-
-  <meta name="description" content="Ruby Xia's selected work in marketing, localization, data storytelling, and video editing." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Work – Ruby Xia — Portfolio</title>
+<meta content="Ruby Xia — projects in luxury hospitality consumer insights, airline strategy, market research, analytics, localization, and digital-tool planning." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
     :root {
       --bg: #f9fafb;
       --bg-elevated: #ffffff;
@@ -740,818 +738,770 @@
       .video-frame-wrap--short { max-width: 300px; }
     }
 
-  </style>
-</head>
+  
+    /* Consumer insights / luxury project first; no new image assets needed */
+    .project-card--luxury { border-color: #d5c29f; }
+    .luxury-thumb { padding: 1.2rem 1.35rem; display: flex; flex-direction: column; justify-content: space-between; color: #f6f0e7; background: linear-gradient(118deg,#142b37,#284653 65%,#4b5150); text-align: left; }
+    .luxury-thumb-kicker { font-size: .61rem; font-weight: 600; letter-spacing: .13em; color: #e3d3b6; }
+    .luxury-thumb-title { font-size: 1.33rem; font-family: 'Space Grotesk',sans-serif; line-height: 1.1; font-weight: 600; letter-spacing: .035em; }
+    .luxury-thumb-note { font-size: .68rem; color: #e7e4da; }
+    .modal-eyebrow { margin: 0 0 .4rem; font-size:.76rem; font-weight:600; letter-spacing:.09em; color:#957541; }
+    /* Video samples are deliberately secondary */
+    #video-editing { padding: .6rem 0 2rem; }
+    .additional-creative { border-top: 1px solid var(--border); padding: 1rem 0; }
+    .additional-creative > summary { cursor:pointer; color:#4b5563; font-size:.89rem; font-weight:600; list-style: revert; }
+    .additional-creative .creative-count { margin-left:.45rem; font-size:.8rem; font-weight:400; color:var(--muted); }
+    .creative-intro { color:var(--muted); font-size:.87rem; margin:.9rem 0; }
+    .additional-creative .video-editing-grid { max-width:750px; grid-template-columns:minmax(0,1.3fr) minmax(0,.75fr); gap: 1rem; }
+    .additional-creative .video-editing-card { box-shadow:none; }
+    .additional-creative .video-editing-copy { padding:.7rem .85rem; }
+    .additional-creative .video-editing-copy h3 { font-size:.9rem; }
+    .additional-creative .video-editing-copy p { font-size:.8rem; }
+    .additional-creative .video-frame-wrap--short { max-width:180px; }
+    @media(max-width:640px) { .additional-creative .video-editing-grid { grid-template-columns: 1fr; } .luxury-thumb-title { font-size:1.2rem; } }
+    </style>
+</link></head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html#hero" class="logo">Ruby Xia</a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="index.html#hero">Home</a>
-        <a href="#case-studies">Work</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+<div class="container nav">
+<a class="logo" href="index.html#hero">Ruby Xia</a>
+<nav aria-label="Primary navigation" class="nav-links">
+<a href="index.html#hero">Home</a>
+<a href="#case-studies">Work</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- PAGE HERO -->
+<section class="page-hero">
+<div class="container">
+<div class="page-hero-eyebrow">Work &amp; case studies</div>
+<div class="page-hero-layout">
+<div>
+<h1 class="page-hero-title">Research, strategy, and the customer experience.</h1>
+<p class="page-hero-sub">Selected research and portfolio projects, with a focus on hospitality, travel, consumer insights, and brand strategy. Each case study explains the question, approach, and what the work demonstrates.</p>
+<p class="page-hero-note">Projects include completed coursework, competitions, and independent work in progress. Unpublished or proprietary materials are not reproduced.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider between hero and case studies -->
+<section aria-hidden="true" class="section-divider">
+<div class="container">
+<div class="divider-inner">
+<span class="divider-line"></span>
+<div class="divider-pill">
+<span class="divider-icon">✦</span>
+<span> </span>
+</div>
+<span class="divider-line"></span>
+</div>
+</div>
+</section>
+<!-- Video Editing & Storytelling -->
 
-  <main>
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-eyebrow">Work &amp; case studies</div>
-        <div class="page-hero-layout">
-          <div>
-            <h1 class="page-hero-title">Selected work across research, marketing, localization, and video.</h1>
-            <p class="page-hero-sub">
-              A collection of project case studies, video editing work, and public-safe documents.
-              Each project highlights my approach, creative decisions, and the final work.
-            </p>
-            <p class="page-hero-note">
-              Case sections below follow a consistent structure. Documents are linked through Google Drive where possible.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Divider between hero and case studies -->
-    <section class="section-divider" aria-hidden="true">
-      <div class="container">
-        <div class="divider-inner">
-          <span class="divider-line"></span>
-          <div class="divider-pill">
-            <span class="divider-icon">✦</span>
-            <span> </span>
-          </div>
-          <span class="divider-line"></span>
-        </div>
-      </div>
-    </section>
+<!-- CASE STUDIES -->
+<section class="section" id="case-studies">
+<div class="container">
+<div class="section-header">
+<div>
+<div class="section-kicker">Research &amp; project case studies</div>
+<h2 class="section-title">Selected projects</h2>
+</div>
+<p class="section-subtitle">Explore selected research, analysis, and strategy projects. Select a card for a concise description of the approach and outcome.</p>
+</div>
+<!-- Preview grid -->
+<div class="projects-grid"><article aria-label="Open The Luxury Expectation Gap case study" class="project-card project-card--luxury" data-project="luxury" role="button" tabindex="0">
+<div aria-label="Luxury hospitality research cover" class="project-thumb luxury-thumb">
+<div class="luxury-thumb-kicker">SINGAPORE / KUALA LUMPUR</div>
+<div class="luxury-thumb-title">THE LUXURY<br/>EXPECTATION GAP</div>
+<div class="luxury-thumb-note">Reputation vs. guest experience</div>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Hospitality · Consumer Insights · 2026</div>
+<h3 class="project-card-title">The Luxury Expectation Gap</h3>
+<p class="project-card-hook">Do five-star reputations match the details guests actually experience? An exploratory guest-review study in Singapore and Kuala Lumpur.</p>
+<div class="project-card-tags"><span class="tag-pill">In progress</span><span class="tag-pill">Review Research</span><span class="tag-pill">Brand Strategy</span></div>
+</div>
+</article>
+<!-- Event templates -->
 
+<!-- AMA -->
 
-    <!-- Video Editing & Storytelling -->
-    <section class="section" id="video-editing" aria-labelledby="video-editing-heading">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-kicker">Creative work</div>
-            <h2 class="section-title" id="video-editing-heading">Video editing &amp; storytelling</h2>
-          </div>
-          <p class="section-subtitle">
-            Two projects showing different sides of my editing: research-based visual explanation and
-            fast-paced short-form storytelling. Videos play directly here, with links to view on YouTube.
-          </p>
-        </div>
-        <div class="video-editing-grid">
-          <article class="video-editing-card" aria-labelledby="essay-video-title">
-            <div class="video-frame-wrap video-frame-wrap--wide">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/MM_9I_ruhL4"
-                title="Research video essay edited by Ruby Xia"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            </div>
-            <div class="video-editing-copy">
-              <span class="video-editing-type">Long-form video · Video essay</span>
-              <h3 id="essay-video-title">Research video essay</h3>
-              <p class="video-role">Academic project · Video editing and storytelling</p>
-              <p>
-                A longer-form piece designed to make a research topic approachable through a coherent visual narrative.
-                It highlights how I structure information for a viewer rather than presenting it only as written text.
-              </p>
-              <ul>
-                <li><strong>Editing focus:</strong> narrative flow, sequencing, pace, and supporting visuals</li>
-                <li><strong>Creative approach:</strong> balancing explanation with viewer engagement</li>
-              </ul>
-              <a class="video-watch-link" href="https://youtu.be/MM_9I_ruhL4" target="_blank" rel="noopener noreferrer">
-                Watch on YouTube <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
+<!-- Localization -->
 
-          <article class="video-editing-card" aria-labelledby="short-video-title">
-            <div class="video-frame-wrap video-frame-wrap--short">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/-b27MpLTLX4"
-                title="Short-form creative travel video edited by Ruby Xia"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            </div>
-            <div class="video-editing-copy">
-              <span class="video-editing-type">Short-form video · Creative editing</span>
-              <h3 id="short-video-title">My Dream Vacation: Plan vs. Reality</h3>
-              <p class="video-role">Personal creative project · Editing and comedic storytelling</p>
-              <p>
-                A playful travel video that uses short-form pacing, captions, and humorous cutaways to bring
-                a lighthearted story together.
-              </p>
-              <ul>
-                <li><strong>Editing focus:</strong> comedic timing, visual references, and concise pacing</li>
-                <li><strong>Creative approach:</strong> turning everyday footage into a shareable narrative</li>
-              </ul>
-              <a class="video-watch-link" href="https://www.youtube.com/shorts/-b27MpLTLX4" target="_blank" rel="noopener noreferrer">
-                Watch on YouTube <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<!-- King County -->
 
-        <!-- CASE STUDIES -->
-    <section class="section" id="case-studies">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-kicker">Case studies</div>
-            <h2 class="section-title">Selected projects</h2>
-          </div>
-          <p class="section-subtitle">
-            Each project is summarized below. Click a card to open a detailed case study in a pop-up without leaving this page.
-          </p>
-        </div>
+<!-- INFO 201 -->
 
-        <!-- Preview grid -->
-        <div class="projects-grid">
-          <!-- Event templates -->
-          <article class="project-card" data-project="events">
-            <div class="project-thumb">
-              <img
-                src="https://drive.google.com/thumbnail?id=1RIQ3zJJBa1P_jg-gqAw3MIW1ljtm0x1j"
-                alt="Preview of event run-of-show or post-event notes template"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Templates · Events</div>
-              <h3 class="project-card-title">
-                Digital Tool Rollout Starter Kit
-              </h3>
-              <p class="project-card-hook">
-                Simple, reusable templates for keeping events organized before, during, and after the day.
-              </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Template</span>
-                <span class="tag-pill">Event planning</span>
-                <span class="tag-pill">Documentation</span>
-              </div>
-            </div>
-          </article>
-          <!-- AMA -->
-          <article class="project-card" data-project="ama">
-            <div class="project-thumb">
-              <img src="https://drive.google.com/thumbnail?id=186s90cZHcq1NpzNGP27FCE5Fsjr1pVN7"
-                   alt="Preview slide from AMA Singapore Airlines deck">
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Marketing · Strategy · Presentation</div>
-              <h3 class="project-card-title">AMA Case Competition — Singapore Airlines</h3>
-              <p class="project-card-hook">
-                Multi-channel launch plan with KPI framework and five-year outlook.
-              </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Marketing</span>
-                <span class="tag-pill">Strategy</span>
-                <span class="tag-pill">KPI framework</span>
-              </div>
-            </div>
-          </article>
+<!-- UWiB -->
 
-          <!-- Localization -->
-          <article class="project-card" data-project="localization">
-            <div class="project-thumb">
-              <img src="https://drive.google.com/thumbnail?id=14DJGm6Be0pMDW4LqEDtb2znXaUghziED"
-                   alt="Preview of EN↔JP technical localization sample">
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Localization · Regulated content</div>
-              <h3 class="project-card-title">EN↔JP Technical Localization — Derived Samples</h3>
-              <p class="project-card-hook">
-                Technical materials localized to natural, professional Japanese.
-              </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Localization</span>
-                <span class="tag-pill">Clinical/technical</span>
-                <span class="tag-pill">JP·EN</span>
-              </div>
-            </div>
-          </article>
+<!-- Appointment Booking Tool Rollout -->
 
-          <!-- King County -->
-          <article class="project-card" data-project="king">
-            <div class="project-thumb">
-              <img src="https://drive.google.com/thumbnail?id=1zdBYtrBKrRzhCYPgC0OZTdgLSa2viLXq"
-                   alt="Preview of King County market analysis brief">
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Research · Analytics</div>
-              <h3 class="project-card-title">King County Market Analysis — Real-Estate Brief</h3>
-              <p class="project-card-hook">
+<article aria-label="Open AMA Case Competition — Singapore Airlines case study" class="project-card" data-project="ama" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="Preview slide from AMA Singapore Airlines deck" src="https://drive.google.com/thumbnail?id=186s90cZHcq1NpzNGP27FCE5Fsjr1pVN7"/>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Airline Marketing · Strategy · February 2025</div>
+<h3 class="project-card-title">AMA Case Competition — Singapore Airlines</h3>
+<p class="project-card-hook">12-month multichannel growth strategy with KPI benchmarks, an assumptions log, and a five-year outlook.</p>
+<div class="project-card-tags">
+<span class="tag-pill">Marketing</span>
+<span class="tag-pill">Strategy</span>
+<span class="tag-pill">KPI framework</span>
+</div>
+</div>
+</article><article aria-label="Open King County Market Analysis — Real-Estate Brief case study" class="project-card" data-project="king" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="Preview of King County market analysis brief" src="https://drive.google.com/thumbnail?id=1zdBYtrBKrRzhCYPgC0OZTdgLSa2viLXq"/>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Research · Analytics</div>
+<h3 class="project-card-title">King County Market Analysis — Real-Estate Brief</h3>
+<p class="project-card-hook">
                 $100M hypothetical investment brief with risk analysis.
               </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Research</span>
-                <span class="tag-pill">Analytics</span>
-                <span class="tag-pill">Real estate</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- INFO 201 -->
-          <article class="project-card" data-project="info201">
-            <div class="project-thumb">
-              <img src="https://drive.google.com/thumbnail?id=1nMf3DniZJy-p2src3xCmNrhlN2R91I11"
-                   alt="Preview of INFO 201 Quarto report">
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Data · Visualization</div>
-              <h3 class="project-card-title">INFO 201 — Data Analysis &amp; Visualization</h3>
-              <p class="project-card-hook">
-                Cleaned datasets and Quarto visuals for reproducible reports.
-              </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Data</span>
-                <span class="tag-pill">Visualization</span>
-                <span class="tag-pill">R / Quarto</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- UWiB -->
-          <article class="project-card" data-project="uwib">
-            <div class="project-thumb">
-              <img src="assets/UWiB_Flyer_Preview.png"
-                   alt="UWiB × AMA × Tableau company visit poster">
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Design · Content</div>
-              <h3 class="project-card-title">UWiB Marketing — Social Graphics</h3>
-              <p class="project-card-hook">
-                Event promo designs that clarify information and boost visibility.
-              </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Design</span>
-                <span class="tag-pill">Content</span>
-                <span class="tag-pill">Student org</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Appointment Booking Tool Rollout -->
-          <article class="project-card" data-project="appointment">
-            <div class="project-thumb">
-              <img src="assets/appointment-preview.png"
-                   alt="Preview of appointment booking tool rollout board" />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-eyebrow">Project Management · Adoption</div>
-              <h3 class="project-card-title">
-                Appointment Booking Tool Rollout — Digital Adoption Kit
-              </h3>
-              <p class="project-card-hook">
+<div class="project-card-tags">
+<span class="tag-pill">Research</span>
+<span class="tag-pill">Analytics</span>
+<span class="tag-pill">Real estate</span>
+</div>
+</div>
+</article><article aria-label="Open NOAA × Zillow — Interactive Data Analysis case study" class="project-card" data-project="info201" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="Preview of INFO 201 Quarto report" src="https://drive.google.com/thumbnail?id=1nMf3DniZJy-p2src3xCmNrhlN2R91I11"/>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Data · Visualization</div>
+<h3 class="project-card-title">NOAA × Zillow — Interactive Data Analysis</h3>
+<p class="project-card-hook">R + Quarto dashboard exploring NOAA storm events and Zillow home values with data joins and interactive visuals.</p>
+<div class="project-card-tags">
+<span class="tag-pill">Data</span>
+<span class="tag-pill">Visualization</span>
+<span class="tag-pill">R / Quarto</span>
+</div>
+</div>
+</article><article aria-label="Open Digital Tool Rollout Starter Kit case study" class="project-card" data-project="appointment" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="Preview of appointment booking tool rollout board" src="assets/appointment-preview.png">
+</img></div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Project Management · Adoption</div>
+<h3 class="project-card-title">Digital Tool Rollout Starter Kit</h3>
+<p class="project-card-hook">
                 Rollout kit with an implementation tracker, adoption dashboard and weekly update templates for a pilot appointment‑booking system.
               </p>
-              <div class="project-card-tags">
-                <span class="tag-pill">Project coordination</span>
-                <span class="tag-pill">Digital tools</span>
-                <span class="tag-pill">Training</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- MODALS (full case studies) -->
-    <div class="project-modal" id="modal-ama">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close AMA case">&times;</button>
-        <h2 class="modal-title">AMA Case Competition — Singapore Airlines</h2>
-        <p class="modal-meta">Role: Strategy &amp; slides · Year: 2024</p>
-        <div class="modal-tags">
-          <span class="tag-pill">Marketing</span>
-          <span class="tag-pill">Strategy</span>
-          <span class="tag-pill">KPI framework</span>
-        </div>
-        <div class="modal-sections">
-          <div>
-            <h3 class="modal-block-title">Context</h3>
-            <p>
+<div class="project-card-tags">
+<span class="tag-pill">Project coordination</span>
+<span class="tag-pill">Digital tools</span>
+<span class="tag-pill">Training</span>
+</div>
+</div>
+</article><article aria-label="Open EN↔JP Technical Localization — Derived Samples case study" class="project-card" data-project="localization" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="Preview of EN↔JP technical localization sample" src="https://drive.google.com/thumbnail?id=14DJGm6Be0pMDW4LqEDtb2znXaUghziED"/>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Localization · Regulated content</div>
+<h3 class="project-card-title">EN↔JP Technical Localization — Derived Samples</h3>
+<p class="project-card-hook">
+                Technical materials localized to natural, professional Japanese.
+              </p>
+<div class="project-card-tags">
+<span class="tag-pill">Localization</span>
+<span class="tag-pill">Clinical/technical</span>
+<span class="tag-pill">JP·EN</span>
+</div>
+</div>
+</article><article aria-label="Open UWiB Marketing — Social Graphics case study" class="project-card" data-project="uwib" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="UWiB × AMA × Tableau company visit poster" src="assets/UWiB_Flyer_Preview.png"/>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Design · Content</div>
+<h3 class="project-card-title">UWiB Marketing — Social Graphics</h3>
+<p class="project-card-hook">
+                Event promo designs that clarify information and boost visibility.
+              </p>
+<div class="project-card-tags">
+<span class="tag-pill">Design</span>
+<span class="tag-pill">Content</span>
+<span class="tag-pill">Student org</span>
+</div>
+</div>
+</article><article aria-label="Open Event Planning — Reusable Templates case study" class="project-card" data-project="events" role="button" tabindex="0">
+<div class="project-thumb">
+<img alt="Preview of event run-of-show or post-event notes template" src="https://drive.google.com/thumbnail?id=1RIQ3zJJBa1P_jg-gqAw3MIW1ljtm0x1j"/>
+</div>
+<div class="project-card-body">
+<div class="project-card-eyebrow">Templates · Events</div>
+<h3 class="project-card-title">Event Planning — Reusable Templates</h3>
+<p class="project-card-hook">
+                Simple, reusable templates for keeping events organized before, during, and after the day.
+              </p>
+<div class="project-card-tags">
+<span class="tag-pill">Template</span>
+<span class="tag-pill">Event planning</span>
+<span class="tag-pill">Documentation</span>
+</div>
+</div>
+</article></div>
+</div>
+</section><div aria-labelledby="luxury-modal-title" aria-modal="true" class="project-modal" id="modal-luxury" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close luxury hospitality research case study" class="modal-close">×</button>
+<p class="modal-eyebrow">INDEPENDENT CONSUMER INSIGHTS RESEARCH · 2026 · IN PROGRESS</p>
+<h2 class="modal-title" id="luxury-modal-title">The Luxury Expectation Gap</h2>
+<p class="modal-meta">Luxury hotel reputation vs. lived guest experience in Singapore and Kuala Lumpur</p>
+<div class="modal-tags"><span class="tag-pill">Consumer Insights</span><span class="tag-pill">Guest Experience</span><span class="tag-pill">Hospitality Brand Strategy</span></div>
+<div class="modal-sections">
+<div><h3 class="modal-block-title">Research question</h3><p>How closely do luxury hotel reputations align with reported guest experiences—and which moments create the largest gaps between expectations and reality?</p></div>
+<div><h3 class="modal-block-title">Why I started it</h3><p>While comparing highly recommended hotels for travel in Singapore and Kuala Lumpur, I noticed detailed recent reviews describing experiences that did not always match a five-star brand promise. I turned that question into an independent consumer-insights project.</p></div>
+<div><h3 class="modal-block-title">What I've done so far</h3><p>Compiled and coded 50+ guest-review accounts and related review evidence, focusing on themes such as staff responsiveness, room condition and cleanliness, perceived value, service consistency, and recovery when things go wrong. Developed an evidence register and an early comparative framework to keep reviews traceable and distinguish guest stays from other hotel interactions.</p></div>
+<div><h3 class="modal-block-title">Research design</h3><p>Designed a more systematic next phase: select 10 luxury properties using independent 2025–2026 hospitality recognitions and sample 200 reviews across hotels to test the preliminary patterns. The planned sample is not presented as completed analysis.</p></div>
+<div><h3 class="modal-block-title">Potential application</h3><p>The goal is to translate recurring guest pain points into questions and recommendations for hospitality brand teams—for example, where operational consistency, expectations set by positioning, and service recovery may matter most to perceived value.</p></div>
+<div><h3 class="modal-block-title">Research status &amp; limitations</h3><p><strong>Exploratory / in progress.</strong> The initial material is weighted toward reviews that raised possible problems, so it cannot estimate overall satisfaction or rank hotels fairly. Reviews reflect individual reports, and findings must be checked against a balanced, systematically selected sample before making broader claims.</p></div>
+</div>
+</div>
+</div>
+<!-- MODALS (full case studies) -->
+<div aria-label="AMA Case Competition — Singapore Airlines" aria-modal="true" class="project-modal" id="modal-ama" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close AMA case" class="modal-close">×</button>
+<h2 class="modal-title">AMA Case Competition — Singapore Airlines</h2>
+<p class="modal-meta">Role: Strategy &amp; presentation · February 2025 · UW American Marketing Association</p>
+<div class="modal-tags">
+<span class="tag-pill">Marketing</span>
+<span class="tag-pill">Strategy</span>
+<span class="tag-pill">KPI framework</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>
               Undergraduate case competition focused on Singapore Airlines. Our team was asked to propose a
               multi-channel marketing plan over five years, aligned with brand positioning and financial constraints.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">My contribution</h3>
-            <ul>
-              <li>Synthesized market and competitor research into a concise strategy direction.</li>
-              <li>Built a KPI framework and five-year outlook with basic financial projections.</li>
-              <li>Authored executive slides and presented the recommendation to judges.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Process</h3>
-            <ul>
-              <li><strong>Research:</strong> Collected secondary data on routes, customer segments, and competitor campaigns.</li>
-              <li><strong>Synthesis:</strong> Narrowed options to a focused set of initiatives with clear audiences and channels.</li>
-              <li><strong>Strategy &amp; design:</strong> Translated the plan into a phased roadmap, KPI table, and financial snapshot.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Result &amp; reflection</h3>
-            <p>
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Synthesized market and competitor research into a concise strategy direction.</li>
+<li>Built a KPI framework and five-year outlook with basic financial projections.</li>
+<li>Authored executive slides and presented the recommendation to judges.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Research:</strong> Collected secondary data on routes, customer segments, and competitor campaigns.</li>
+<li><strong>Synthesis:</strong> Narrowed options to a focused set of initiatives with clear audiences and channels.</li>
+<li><strong>Strategy &amp; design:</strong> Translated the plan into a phased roadmap, KPI table, and financial snapshot.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Result &amp; reflection</h3>
+<p>
               Produced a cohesive deck tying goals, tactics, and KPIs together. The project strengthened my ability to
               scope assumptions and communicate trade-offs clearly.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Links &amp; assets</h3>
-            <div class="modal-links">
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
               Slides excerpt (PDF) available in the Google Drive portfolio folder.
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-modal" id="modal-localization">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close localization case">&times;</button>
-        <h2 class="modal-title">EN↔JP Technical Localization — Derived Samples</h2>
-        <p class="modal-meta">Role: Translator &amp; reviewer</p>
-        <div class="modal-tags">
-          <span class="tag-pill">Localization</span>
-          <span class="tag-pill">Clinical/technical</span>
-          <span class="tag-pill">JP·EN</span>
-        </div>
-        <div class="modal-sections">
-          <div>
-            <h3 class="modal-block-title">Context</h3>
-            <p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="EN↔JP Technical Localization — Derived Samples" aria-modal="true" class="project-modal" id="modal-localization" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close localization case" class="modal-close">×</button>
+<h2 class="modal-title">EN↔JP Technical Localization — Derived Samples</h2>
+<p class="modal-meta">Role: Translator &amp; reviewer</p>
+<div class="modal-tags">
+<span class="tag-pill">Localization</span>
+<span class="tag-pill">Clinical/technical</span>
+<span class="tag-pill">JP·EN</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>
               To demonstrate readiness for internship-level localization work, I created paraphrased translation samples
               that mimic clinical and technical documents without using proprietary material.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">My contribution</h3>
-            <ul>
-              <li>Produced paraphrased JP translations imitating clinical and technical content.</li>
-              <li>Created a mini glossary and style notes for consistent terminology.</li>
-              <li>Documented translation choices and edge cases for future reference.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Process</h3>
-            <ul>
-              <li><strong>Research:</strong> Reviewed reference materials and official terminology sources in Japanese.</li>
-              <li><strong>Synthesis:</strong> Identified patterns in how technical concepts are conveyed.</li>
-              <li><strong>Localization:</strong> Drafted EN↔JP samples, refining tone and register to be natural yet precise.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Result &amp; reflection</h3>
-            <p>
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Produced paraphrased JP translations imitating clinical and technical content.</li>
+<li>Created a mini glossary and style notes for consistent terminology.</li>
+<li>Documented translation choices and edge cases for future reference.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Research:</strong> Reviewed reference materials and official terminology sources in Japanese.</li>
+<li><strong>Synthesis:</strong> Identified patterns in how technical concepts are conveyed.</li>
+<li><strong>Localization:</strong> Drafted EN↔JP samples, refining tone and register to be natural yet precise.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Result &amp; reflection</h3>
+<p>
               Built a small but representative set of samples that show how I handle technical concepts in Japanese while
               preserving meaning from English.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Links &amp; assets</h3>
-            <div class="modal-links">
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
               Translation samples PDF available in the Google Drive portfolio folder.
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-modal" id="modal-king">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close King County case">&times;</button>
-        <h2 class="modal-title">King County Market Analysis — Real-Estate Brief</h2>
-        <p class="modal-meta">Role: Lead analyst</p>
-        <div class="modal-tags">
-          <span class="tag-pill">Research</span>
-          <span class="tag-pill">Analytics</span>
-          <span class="tag-pill">Real estate</span>
-        </div>
-        <div class="modal-sections">
-          <div>
-            <h3 class="modal-block-title">Context</h3>
-            <p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="King County Market Analysis — Real-Estate Brief" aria-modal="true" class="project-modal" id="modal-king" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close King County case" class="modal-close">×</button>
+<h2 class="modal-title">King County Market Analysis — Real-Estate Brief</h2>
+<p class="modal-meta">Role: Lead analyst</p>
+<div class="modal-tags">
+<span class="tag-pill">Research</span>
+<span class="tag-pill">Analytics</span>
+<span class="tag-pill">Real estate</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>
               Course project framing a hypothetical $100M investment in the King County / Bellevue area, assessing
               market conditions, risks, and a recommended direction using public data and commentary.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">My contribution</h3>
-            <ul>
-              <li>Collected public records, broker reports, and news sources on supply, demand, and pricing.</li>
-              <li>Modeled simple demand/supply scenarios and highlighted key risk factors.</li>
-              <li>Drafted a risk-aware recommendation with citations and rationale.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Process</h3>
-            <ul>
-              <li><strong>Research:</strong> Compiled data on vacancy rates, pipeline, and demographic trends.</li>
-              <li><strong>Synthesis:</strong> Grouped risks into categories and estimated relative impact.</li>
-              <li><strong>Strategy:</strong> Positioned a recommended asset type and timing based on those scenarios.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Result &amp; reflection</h3>
-            <p>
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Collected public records, broker reports, and news sources on supply, demand, and pricing.</li>
+<li>Modeled simple demand/supply scenarios and highlighted key risk factors.</li>
+<li>Drafted a risk-aware recommendation with citations and rationale.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Research:</strong> Compiled data on vacancy rates, pipeline, and demographic trends.</li>
+<li><strong>Synthesis:</strong> Grouped risks into categories and estimated relative impact.</li>
+<li><strong>Strategy:</strong> Positioned a recommended asset type and timing based on those scenarios.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Result &amp; reflection</h3>
+<p>
               The memo presented a structured, evidence-backed recommendation and made uncertainties explicit instead of
               hiding them.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Links &amp; assets</h3>
-            <div class="modal-links">
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
               Market brief excerpt available in the Google Drive portfolio folder.
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-modal" id="modal-info201">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close INFO 201 case">&times;</button>
-        <h2 class="modal-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h2>
-        <p class="modal-meta">Role: Analyst &amp; author</p>
-        <div class="modal-tags">
-          <span class="tag-pill">Data</span>
-          <span class="tag-pill">Visualization</span>
-          <span class="tag-pill">R / Quarto</span>
-        </div>
-        <div class="modal-sections">
-          <div>
-            <h3 class="modal-block-title">Context</h3>
-            <p>
-              INFO 201 focused on cleaning, transforming, and visualizing public datasets in R, then communicating
-              findings through reproducible Quarto reports.
-            </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">My contribution</h3>
-            <ul>
-              <li>Cleaned data with <code>dplyr</code> and related packages.</li>
-              <li>Created charts in <code>ggplot2</code> with clear labels and captions.</li>
-              <li>Authored the Quarto narrative and ensured the report was reproducible.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Process</h3>
-            <ul>
-              <li><strong>Data cleaning:</strong> Tidied raw data, handled missing values, and created derived variables.</li>
-              <li><strong>Visualization:</strong> Chose charts that matched the questions instead of overcomplicating them.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Result &amp; reflection</h3>
-            <p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="INFO 201 — Data Analysis &amp; Visualization (R + Quarto)" aria-modal="true" class="project-modal" id="modal-info201" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close INFO 201 case" class="modal-close">×</button>
+<h2 class="modal-title">INFO 201 — Data Analysis &amp; Visualization (R + Quarto)</h2>
+<p class="modal-meta">Role: Analyst &amp; author</p>
+<div class="modal-tags">
+<span class="tag-pill">Data</span>
+<span class="tag-pill">Visualization</span>
+<span class="tag-pill">R / Quarto</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>INFO 201 data project combining NOAA storm-event records and Zillow home-value data. Used R and Quarto to join datasets, handle dates, build ggplot2 and Plotly visuals, and explain exploratory patterns to non-technical readers without inferring causation.</p>
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Cleaned data with <code>dplyr</code> and related packages.</li>
+<li>Created charts in <code>ggplot2</code> with clear labels and captions.</li>
+<li>Authored the Quarto narrative and ensured the report was reproducible.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Data cleaning:</strong> Tidied raw data, handled missing values, and created derived variables.</li>
+<li><strong>Visualization:</strong> Chose charts that matched the questions instead of overcomplicating them.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Result &amp; reflection</h3>
+<p>
               The report provided a simple but transparent data story and made me more comfortable using R as a supporting
               tool for communication.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Links &amp; assets</h3>
-            <div class="modal-links">
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
               Quarto report excerpt and slides available in the Google Drive portfolio folder.
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-modal" id="modal-uwib">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close UWiB case">&times;</button>
-        <h2 class="modal-title">UWiB Marketing — Social Graphics</h2>
-        <p class="modal-meta">Role: Designer &amp; coordinator</p>
-        <div class="modal-tags">
-          <span class="tag-pill">Design</span>
-          <span class="tag-pill">Content</span>
-          <span class="tag-pill">Student org</span>
-        </div>
-        <div class="modal-sections">
-          <div>
-            <h3 class="modal-block-title">Context</h3>
-            <p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="UWiB Marketing — Social Graphics" aria-modal="true" class="project-modal" id="modal-uwib" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close UWiB case" class="modal-close">×</button>
+<h2 class="modal-title">UWiB Marketing — Social Graphics</h2>
+<p class="modal-meta">Role: Designer &amp; coordinator</p>
+<div class="modal-tags">
+<span class="tag-pill">Design</span>
+<span class="tag-pill">Content</span>
+<span class="tag-pill">Student org</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>
               As part of University of Washington Women in Business (UWiB), I created event marketing materials that needed
               to be concise, on-brand, and easy for busy students to understand at a glance.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">My contribution</h3>
-            <ul>
-              <li>Designed event flyers and short social posts aligned to UWiB’s tone and guidelines.</li>
-              <li>Maintained a deadlines and opportunities tracker to keep content on schedule.</li>
-              <li>Adjusted copy and layout to keep information clear in small spaces.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Process</h3>
-            <ul>
-              <li><strong>Briefing:</strong> Confirmed event details, audience, and key message with organizers.</li>
-              <li><strong>Design:</strong> Built layouts in Canva that prioritized clarity and scannability.</li>
-              <li><strong>Iteration:</strong> Incorporated feedback and made quick adjustments to timing or emphasis.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Links &amp; assets</h3>
-            <div class="modal-links">
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Designed event flyers and short social posts aligned to UWiB’s tone and guidelines.</li>
+<li>Maintained a deadlines and opportunities tracker to keep content on schedule.</li>
+<li>Adjusted copy and layout to keep information clear in small spaces.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Briefing:</strong> Confirmed event details, audience, and key message with organizers.</li>
+<li><strong>Design:</strong> Built layouts in Canva that prioritized clarity and scannability.</li>
+<li><strong>Iteration:</strong> Incorporated feedback and made quick adjustments to timing or emphasis.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
               Sample event flyer (10_Visual_Design_EventFlyer_RubyXia.pdf) shown in the Google Drive portfolio.
               </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Event templates modal (separate from UWiB) -->
-    <div class="project-modal" id="modal-events">
-      <div class="modal-inner">
-      <button class="modal-close" aria-label="Close event templates case">&times;</button>
-      <h2 class="modal-title">Event Templates — Run-of-Show &amp; Post-Event Notes</h2>
-      <p class="modal-meta">
+</div>
+</div>
+</div>
+</div>
+<!-- Event templates modal (separate from UWiB) -->
+<div aria-label="Event Templates — Run-of-Show &amp; Post-Event Notes" aria-modal="true" class="project-modal" id="modal-events" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close event templates case" class="modal-close">×</button>
+<h2 class="modal-title">Event Templates — Run-of-Show &amp; Post-Event Notes</h2>
+<p class="modal-meta">
         Role: Organizer &amp; template designer · Focus: repeatable event workflows
       </p>
-      <div class="modal-tags">
-        <span class="tag-pill">Template</span>
-        <span class="tag-pill">Event planning</span>
-        <span class="tag-pill">Documentation</span>
-      </div> 
-      <div class="modal-sections">
-        <div>
-          <h3 class="modal-block-title">Context</h3>
-          <p>
+<div class="modal-tags">
+<span class="tag-pill">Template</span>
+<span class="tag-pill">Event planning</span>
+<span class="tag-pill">Documentation</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>
             I created separate run-of-show and post-event notes templates to keep small events organized.
             The goal was to make it easy for teams to see timelines, owners, outcomes, and follow-ups in one place,
             without relying on one-off documents.
           </p>
-        </div>
-        <div>
-          <h3 class="modal-block-title">My contribution</h3>
-          <ul>
-            <li>Designed a run-of-show template that lays out timing, owners, and key actions for the day.</li>
-            <li>Built a post-event notes template to capture outcomes, issues, and next steps right after events.</li>
-            <li>Formatted both templates so they’re easy to reuse, duplicate, and share with other teammates.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="modal-block-title">Process</h3>
-          <ul>
-            <li><strong>Research:</strong> Looked at agendas and debrief formats used in student orgs and small events.</li>
-            <li><strong>Structure:</strong> Chose a minimal set of fields that keep teams aligned without adding extra work.</li>
-            <li><strong>Refinement:</strong> Tried the templates with real events and adjusted sections based on how people filled them in.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="modal-block-title">Result &amp; reflection</h3>
-          <p>
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Designed a run-of-show template that lays out timing, owners, and key actions for the day.</li>
+<li>Built a post-event notes template to capture outcomes, issues, and next steps right after events.</li>
+<li>Formatted both templates so they’re easy to reuse, duplicate, and share with other teammates.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Research:</strong> Looked at agendas and debrief formats used in student orgs and small events.</li>
+<li><strong>Structure:</strong> Chose a minimal set of fields that keep teams aligned without adding extra work.</li>
+<li><strong>Refinement:</strong> Tried the templates with real events and adjusted sections based on how people filled them in.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Result &amp; reflection</h3>
+<p>
             Together, the two templates make it easier to hand off responsibilities and remember details after events.
             They show how I think about organizing information so it stays practical, repeatable, and team-friendly.
           </p>
-        </div>
-        <div>
-          <h3 class="modal-block-title">Links &amp; assets</h3>
-          <div class="modal-links">
-            <p style="margin-bottom: 0.4rem;">
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
+<p style="margin-bottom: 0.4rem;">
               Both templates are available in my Google Drive portfolio folder:
             </p>
-            <ul>
-              <li>Event Run-of-Show (PDF)</li>
-              <li>Post-Event Notes Template (PDF)</li>
-            </ul>
-            <p style="margin-top: 0.3rem;">
+<ul>
+<li>Event Run-of-Show (PDF)</li>
+<li>Post-Event Notes Template (PDF)</li>
+</ul>
+<p style="margin-top: 0.3rem;">
               You can also preview each template directly below.
             </p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Previews: two separate files -->
-      <div style="margin-top: 1rem; display: grid; grid-template-columns: minmax(0,1fr); gap: 1rem;">
-        <!-- Run-of-show -->
-        <div>
-          <h3 class="modal-block-title">Run-of-Show</h3>
-          <iframe
-            src="https://drive.google.com/file/d/1RIQ3zJJBa1P_jg-gqAw3MIW1ljtm0x1j/preview"
-            style="width: 100%; height: 320px; border: none; border-radius: 12px;"
-            title="Event run-of-show template preview"
-            loading="lazy"
-          ></iframe>
-        </div>
-        <!-- Post-event notes -->
-        <div>
-          <h3 class="modal-block-title">Post-Event Notes</h3>
-          <iframe
-            src="https://drive.google.com/file/d/1M6N7qgiC3JlpyjrhipX8vKNKJbSjZxXK/preview"
-            style="width: 100%; height: 320px; border: none; border-radius: 12px;"
-            title="Post-event notes template preview"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-    </div>
-    <!-- Appointment booking rollout modal -->
-    <div class="project-modal" id="modal-appointment">
-      <div class="modal-inner">
-        <button class="modal-close" aria-label="Close appointment booking case">&times;</button>
-        <h2 class="modal-title">
+</div>
+</div>
+</div>
+<!-- Previews: two separate files -->
+<div style="margin-top: 1rem; display: grid; grid-template-columns: minmax(0,1fr); gap: 1rem;">
+<!-- Run-of-show -->
+<div>
+<h3 class="modal-block-title">Run-of-Show</h3>
+<iframe loading="lazy" src="https://drive.google.com/file/d/1RIQ3zJJBa1P_jg-gqAw3MIW1ljtm0x1j/preview" style="width: 100%; height: 320px; border: none; border-radius: 12px;" title="Event run-of-show template preview"></iframe>
+</div>
+<!-- Post-event notes -->
+<div>
+<h3 class="modal-block-title">Post-Event Notes</h3>
+<iframe loading="lazy" src="https://drive.google.com/file/d/1M6N7qgiC3JlpyjrhipX8vKNKJbSjZxXK/preview" style="width: 100%; height: 320px; border: none; border-radius: 12px;" title="Post-event notes template preview"></iframe>
+</div>
+</div>
+</div>
+</div>
+<!-- Appointment booking rollout modal -->
+<div aria-label="Digital Tool Rollout Starter Kit" aria-modal="true" class="project-modal" id="modal-appointment" role="dialog">
+<div class="modal-inner" tabindex="-1">
+<button aria-label="Close appointment booking case" class="modal-close">×</button>
+<h2 class="modal-title">
          Digital Tool Rollout Starter Kit
         </h2>
-        <p class="modal-meta">
-          Role: Project Coordinator & Data Analyst · Year: 2026
+<p class="modal-meta">
+          Role: Project Coordinator &amp; Data Analyst · Year: 2026
         </p>
-        <div class="modal-tags">
-          <span class="tag-pill">Project coordination</span>
-          <span class="tag-pill">Digital tools</span>
-          <span class="tag-pill">Training</span>
-        </div>
-        <div class="modal-sections">
-          <div>
-            <h3 class="modal-block-title">Context</h3>
-            <p>
+<div class="modal-tags">
+<span class="tag-pill">Project coordination</span>
+<span class="tag-pill">Digital tools</span>
+<span class="tag-pill">Training</span>
+</div>
+<div class="modal-sections">
+<div>
+<h3 class="modal-block-title">Context</h3>
+<p>
               To simulate a luxury retail appointment booking rollout, I created a digital tool rollout starter kit for a pilot booking system. The kit documents each phase of implementation—planning, setup, testing, training, and post‑launch support—and packages deliverables to make adoption effortless for store teams.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">My contribution</h3>
-            <ul>
-              <li>Designed a Monday.com‑style tracker with phases, tasks, owners, statuses, due dates, dependencies and stakeholder notes.</li>
-              <li>Prepared concise weekly update templates and goals to communicate progress and next actions.</li>
-              <li>Built an adoption dashboard tracking activation, training completion and bookings created; captured sample results to drive follow‑up actions.</li>
-              <li>Created training and reference materials (quick guide and mini deck) tailored for boutique teams.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Process</h3>
-            <ul>
-              <li><strong>Research:</strong> Established project phases (Plan, Setup, Testing, Training & Comms, Launch & Support) and identified pilot users.</li>
-              <li><strong>Structure:</strong> Populated the tracker with realistic tasks, dependencies and status notes to mirror a real rollout.</li>
-              <li><strong>Metrics:</strong> Defined activation, training completion and bookings created as key indicators; set targets and recorded sample results for Week 1 and Week 2.</li>
-              <li><strong>Communication:</strong> Wrote clear “Last update / Next / Blocked by” notes and developed training content using the same aesthetic as the rest of the portfolio.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Result & reflection</h3>
-            <p>
+</div>
+<div>
+<h3 class="modal-block-title">My contribution</h3>
+<ul>
+<li>Designed a Monday.com‑style tracker with phases, tasks, owners, statuses, due dates, dependencies and stakeholder notes.</li>
+<li>Prepared concise weekly update templates and goals to communicate progress and next actions.</li>
+<li>Built an adoption dashboard tracking activation, training completion and bookings created; captured sample results to drive follow‑up actions.</li>
+<li>Created training and reference materials (quick guide and mini deck) tailored for boutique teams.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Process</h3>
+<ul>
+<li><strong>Research:</strong> Established project phases (Plan, Setup, Testing, Training &amp; Comms, Launch &amp; Support) and identified pilot users.</li>
+<li><strong>Structure:</strong> Populated the tracker with realistic tasks, dependencies and status notes to mirror a real rollout.</li>
+<li><strong>Metrics:</strong> Defined activation, training completion and bookings created as key indicators; set targets and recorded sample results for Week 1 and Week 2.</li>
+<li><strong>Communication:</strong> Wrote clear “Last update / Next / Blocked by” notes and developed training content using the same aesthetic as the rest of the portfolio.</li>
+</ul>
+</div>
+<div>
+<h3 class="modal-block-title">Result &amp; reflection</h3>
+<p>
               The digital adoption kit demonstrates end‑to‑end project coordination for a digital tool rollout. It shows how I think through tasks, risks and metrics to ensure a new system is adopted smoothly, and highlights my ability to translate complex processes into clear visuals and concise stakeholder updates.
             </p>
-          </div>
-          <div>
-            <h3 class="modal-block-title">Links & assets</h3>
-            <div class="modal-links">
-              <p style="margin-bottom: 0.4rem;">
+</div>
+<div>
+<h3 class="modal-block-title">Links &amp; assets</h3>
+<div class="modal-links">
+<p style="margin-bottom: 0.4rem;">
                 Download the full rollout kit PDF:
               </p>
-              <ul>
-                <li>
-                  <a href="assets/Ruby_Xia_Digital_Tool_Rollout_Starter_Kit.pdf" target="_blank" rel="noopener">
+<ul>
+<li>
+<a href="assets/Ruby_Xia_Digital_Tool_Rollout_Starter_Kit.pdf" rel="noopener" target="_blank">
                     Digital Tool Rollout Starter Kit (PDF)
                   </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DOCUMENTS SECTION -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-kicker">Documents (Google Drive)</div>
-            <h2 class="section-title">PDFs &amp; excerpts</h2>
-          </div>
-          <p class="section-subtitle">
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DOCUMENTS SECTION -->
+<section class="section">
+<div class="container">
+<div class="section-header">
+<div>
+<div class="section-kicker">Documents (Google Drive)</div>
+<h2 class="section-title">PDFs &amp; excerpts</h2>
+</div>
+<p class="section-subtitle">
             Browse portfolio PDFs, translation samples, and templates hosted in Google Drive.
           </p>
-        </div>
-
-        <div class="docs-layout">
-          <div class="docs-card">
-            <iframe
-              class="docs-frame"
-              src="https://drive.google.com/embeddedfolderview?id=1ilmWrH4HcGjcU1ujFeOS-VyFFb9e1XD1#list"
-              title="Google Drive portfolio folder (Ruby Xia)"
-            ></iframe>
-          </div>
-          <div class="docs-meta">
-            <p class="docs-note">
+</div>
+<div class="docs-layout">
+<div class="docs-card">
+<iframe class="docs-frame" src="https://drive.google.com/embeddedfolderview?id=1ilmWrH4HcGjcU1ujFeOS-VyFFb9e1XD1#list" title="Google Drive portfolio folder (Ruby Xia)"></iframe>
+</div>
+<div class="docs-meta">
+<p class="docs-note">
               This folder includes:
             </p>
-            <ul class="docs-note" style="padding-left:1.1rem; margin-top:0.25rem;">
-                    <li>Portfolio README overview and index.</li>
-              <li>Selected AMA strategy slides.</li>
-              <li>Run-of-show and post-event notes templates.</li>
-              <li>INFO 201 dashboard and presentation excerpts.</li>
-              <li>Market analysis and workflow/code excerpts.</li>
-              <li>Sample event flyer design.</li>
-            </ul>
-            <p class="docs-note" style="margin-top:0.6rem;">
+<ul class="docs-note" style="padding-left:1.1rem; margin-top:0.25rem;">
+<li>Portfolio README overview and index.</li>
+<li>Selected AMA strategy slides.</li>
+<li>Run-of-show and post-event notes templates.</li>
+<li>INFO 201 dashboard and presentation excerpts.</li>
+<li>Market analysis and workflow/code excerpts.</li>
+<li>Sample event flyer design.</li>
+</ul>
+<p class="docs-note" style="margin-top:0.6rem;">
               You can open each PDF in a new tab from this embedded folder view.
               Proprietary SpectraCell materials are not included; only derived, public-safe samples appear here.
             </p>
-          </div>
-        </div>
-        <div class="contact-cta">
-          <div>
-            <strong>Need more detail on a project?</strong>
-            <div style="margin-top:0.25rem;">
+</div>
+</div>
+<div class="contact-cta">
+<div>
+<strong>Need more detail on a project?</strong>
+<div style="margin-top:0.25rem;">
               I can share additional context or walk through a slide deck live, as long as it is appropriate and non-confidential.
             </div>
-          </div>
-          <div>
-            <a class="btn btn-primary" href="index.html#contact">Go to contact section</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Legal -->
-  <section class="legal-notes">
-    <div class="container">
-      <h2 class="legal-title">Legal &amp; notes</h2>
-      <p class="legal-text">
+</div>
+<div>
+<a class="btn btn-primary" href="index.html#contact">Go to contact section</a>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="video-editing-heading" class="section" id="video-editing">
+<div class="container">
+<details class="additional-creative">
+<summary>Additional creative work <span class="creative-count">2 optional video samples</span></summary>
+<p class="creative-intro">Supplementary examples of visual storytelling, separate from my research and brand-strategy projects.</p>
+<div class="video-editing-grid">
+<article class="video-editing-card">
+<div class="video-frame-wrap video-frame-wrap--wide">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/MM_9I_ruhL4" title="Research video essay edited by Ruby Xia"></iframe>
+</div>
+<div class="video-editing-copy"><h3>Research video essay</h3><p>Long-form communication, visual sequencing, and narrative pacing.</p><a class="video-watch-link" href="https://youtu.be/MM_9I_ruhL4" rel="noopener noreferrer" target="_blank">Watch on YouTube ↗</a></div>
+</article>
+<article class="video-editing-card">
+<div class="video-frame-wrap video-frame-wrap--short">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/-b27MpLTLX4" title="Travel-themed creative short edited by Ruby Xia"></iframe>
+</div>
+<div class="video-editing-copy"><h3>My Dream Vacation: Plan vs. Reality</h3><p>Short-form creative work using captions and comedic timing.</p><a class="video-watch-link" href="https://www.youtube.com/shorts/-b27MpLTLX4" rel="noopener noreferrer" target="_blank">Watch on YouTube ↗</a></div>
+</article>
+</div>
+</details>
+</div>
+</section>
+</main>
+<!-- Legal -->
+<section class="legal-notes">
+<div class="container">
+<h2 class="legal-title">Legal &amp; notes</h2>
+<p class="legal-text">
         This portfolio is for personal, non-commercial use and demonstration only. Case studies are based on coursework,
         competitions, and self-initiated projects. Some details may be simplified or combined to protect confidentiality.
       </p>
-      <p class="legal-text">
+<p class="legal-text">
         Any clinical, laboratory, or health-related content is illustrative and must not be used as medical advice or to interpret
         test results. Opinions expressed are my own and do not represent the University of Washington, SpectraCell Laboratories,
         or any past collaborators.
       </p>
-      <p class="legal-text">
+<p class="legal-text">
         All trademarks, logos, and brand names are the property of their respective owners.
       </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-main">
-        <span>© <span id="year"></span> Ziyu Xia</span>
-        <span class="footer-separator">·</span>
-        <a href="index.html">Home</a>
-        <span class="footer-separator">·</span>
-        <a href="myworks.html">Work</a>
-        <span class="footer-separator">·</span>
-        <a href="index.html#contact">Contact</a>
-        <span class="footer-separator">·</span>
-        <a href="mailto:rubyxia369@gmail.com">Email</a>
-        <span class="footer-separator">·</span>
-        <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="footer-separator">·</span>
-        <a href="Ziyu_Xia_Resume_Primary.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-      </div>
-      <div class="footer-accessibility">
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container footer-inner">
+<div class="footer-main">
+<span>© <span id="year"></span> Ziyu Xia</span>
+<span class="footer-separator">·</span>
+<a href="index.html">Home</a>
+<span class="footer-separator">·</span>
+<a href="myworks.html">Work</a>
+<span class="footer-separator">·</span>
+<a href="index.html#contact">Contact</a>
+<span class="footer-separator">·</span>
+<a href="mailto:rubyxia369@gmail.com">Email</a>
+<span class="footer-separator">·</span>
+<a href="https://www.linkedin.com/in/ruby-xia-450414295" rel="noopener" target="_blank">LinkedIn</a>
+<span class="footer-separator">·</span>
+<a href="Ruby_Xia_Resume.pdf" rel="noopener" target="_blank">Résumé (PDF)</a>
+</div>
+<div class="footer-accessibility">
         Accessibility: alt text for key visuals, high-contrast palette, keyboard-navigable links.
       </div>
-    </div>
-  </footer>
-
-  <script>
+</div>
+</footer>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Project card → modal logic
-    const cards = document.querySelectorAll('.project-card');
+    const cards = document.querySelectorAll('.projects-grid .project-card');
     const modals = document.querySelectorAll('.project-modal');
-
+    const hashAliases = {
+      'luxury-case':'luxury', 'ama-case':'ama', 'info201-case':'info201',
+      'localization-case':'localization', 'appointment':'appointment',
+      'king-case':'king', 'uwib-case':'uwib', 'events-case':'events'
+    };
+    let lastTrigger = null;
+    function showModal(key, trigger) {
+      const modal = document.getElementById('modal-' + key);
+      if (!modal) return;
+      for (const m of modals) m.classList.remove('active');
+      lastTrigger = trigger || null;
+      modal.classList.add('active');
+      document.body.style.overflow='hidden';
+      modal.querySelector('.modal-close')?.focus();
+    }
+    function closeModal(modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow='';
+      if(lastTrigger) lastTrigger.focus();
+    }
     cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const key = card.getAttribute('data-project');
-        const modal = document.getElementById('modal-' + key);
-        if (modal) modal.classList.add('active');
+      const open = () => showModal(card.dataset.project,card);
+      card.addEventListener('click',open);
+      card.addEventListener('keydown',e => {
+        if(e.key==='Enter' || e.key===' ') { e.preventDefault(); open(); }
       });
     });
-
     modals.forEach(modal => {
-      const closeBtn = modal.querySelector('.modal-close');
-
-      if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-          modal.classList.remove('active');
-        });
-      }
-
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.classList.remove('active');
-        }
-      });
+      modal.querySelector('.modal-close')?.addEventListener('click',()=>closeModal(modal));
+      modal.addEventListener('click',e=> { if(e.target===modal) closeModal(modal); });
     });
-  </script>
+    document.addEventListener('keydown',e=> {
+      if(e.key!=='Escape') return;
+      const active=document.querySelector('.project-modal.active');
+      if(active) closeModal(active);
+    });
+    function openFromHash() {
+      const slug=decodeURIComponent(location.hash.slice(1));
+      if(hashAliases[slug]) showModal(hashAliases[slug],null);
+    }
+    window.addEventListener('hashchange',openFromHash);
+    openFromHash();
+    </script>
 </body>
 </html>
-
