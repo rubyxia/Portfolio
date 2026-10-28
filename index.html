@@ -1,15 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ruby Xia — Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ruby Xia — portfolio of marketing strategy, localization, research, data storytelling, and video editing projects." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
-
-  <style>
+<meta charset="utf-8"/>
+<title>Ruby Xia — Portfolio</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Ruby Xia — consumer insights, travel and luxury hospitality research, brand strategy, airline marketing, and analytics portfolio." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #f9fafb;
       --bg-elevated: #ffffff;
@@ -540,365 +540,208 @@
       }
     }
 
-    /* Video portfolio — two formats, two storytelling styles */
-    #videos { scroll-margin-top: 82px; }
-    .video-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-    .video-preview-card {
-      display: block;
-      overflow: hidden;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-    }
-    .video-preview-card:hover,
-    .video-preview-card:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.10);
-      outline-offset: 3px;
-    }
-    .video-preview-thumb {
-      position: relative;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      background: linear-gradient(135deg, #e8eefb, #cbd9f7);
-    }
-    .video-preview-thumb img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0;
-    }
-    .video-preview-play {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      color: #fff;
-      background: rgba(15, 23, 42, 0.82);
-      border-radius: 50%;
-      font-size: 1.45rem;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
-    }
-    .video-preview-copy { padding: 1.1rem 1.25rem 1.3rem; }
-    .video-preview-copy h3 { margin: 0.2rem 0 0.4rem; font-size: 1.1rem; }
-    .video-preview-copy p { margin: 0 0 0.65rem; font-size: 0.92rem; color: #4b5563; }
-    .video-preview-type { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; }
-    .video-preview-link { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
-    @media (max-width: 720px) {
-      .video-preview-grid { grid-template-columns: 1fr; }
-    }
 
-  </style>
+  
+    /* Travel & luxury emphasis */
+    .project-card--luxury { border-top: 3px solid #c2a56c; }
+    .project-card .project-footer-link { margin-top: auto; padding-top: .65rem; }
+    .hero-subline, .about-body { color: var(--muted); }
+    @media (max-width: 720px) { .hero-kicker { letter-spacing: .10em; font-size: .84rem; } }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#hero" class="logo">Ruby Xia</a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#hero">Home</a>
-        <a href="myworks.html">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section id="hero" aria-labelledby="hero-title">
-      <div class="container hero-layout">
-        <div>
-          
-        <div class="hero-kicker">Marketing strategy · Localization · Data storytelling</div>
-        
-        <h1 class="hero-title" id="hero-title">Ruby Xia</h1>
-        
-        <p class="hero-subline">
-        I am a trilingual University of Washington undergraduate interested in global marketing,
-        brand communication, localization, and data-informed storytelling. My work combines
-        cross-cultural communication with practical marketing execution: translating complex ideas,
-        organizing information clearly, and turning research into materials that are easy for teams
-        and audiences to use.
-        </p>
-        
-        <div class="hero-ctas">
-          <a href="myworks.html" class="btn btn-primary">View Work</a>
-          <a href="#contact" class="btn btn-ghost">Contact</a>
-          <a href="Ziyu_Xia_Resume_Primary.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
+<header class="site-header">
+<div class="container nav">
+<a class="logo" href="#hero">Ruby Xia</a>
+<nav aria-label="Primary" class="nav-links">
+<a href="#hero">Home</a>
+<a href="myworks.html">Work</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero -->
+<section aria-labelledby="hero-title" id="hero">
+<div class="container hero-layout">
+<div>
+<div class="hero-kicker">Consumer Insights · Travel &amp; Luxury · Brand Strategy</div>
+<h1 class="hero-title" id="hero-title">Ruby Xia</h1>
+<p class="hero-subline">
+      I study what shapes customer experiences and how brands can close the gap between expectations and reality. My projects bring together consumer research, market analysis, brand strategy, and data storytelling—with a particular interest in travel, hospitality, and luxury.
+    </p>
+<div class="hero-ctas">
+<a class="btn btn-primary" href="myworks.html">View Work</a>
+<a class="btn btn-ghost" href="#contact">Contact</a>
+<a class="btn btn-ghost" href="Ruby_Xia_Resume.pdf" rel="noopener" target="_blank">
             View Résumé
           </a>
-        </div>
-        
-        <div class="hero-meta">
-          <strong>Currently:</strong> University of Washington undergraduate expected to graduate in June 2027,
-          with experience in global marketing, EN↔JP localization, market research, data visualization,
-          and creative video editing.
-        </div>
-      </div>
-      </div>
-    </section>
+</div>
+<div class="hero-meta">
+<strong>Currently:</strong> University of Washington undergraduate pursuing a B.A. in Sociology and a minor in Business (expected June 2027). Fluent in Chinese, English, and Japanese (JLPT N1).
+    </div>
+</div>
+</div>
+</section>
+<!-- Featured projects -->
+<section aria-labelledby="featured-heading" id="featured">
+<div class="container">
+<div class="section-heading">
+<h2 id="featured-heading">Featured projects</h2>
+<p>
+      Featured work in hospitality consumer insights, airline brand strategy, and applied analytics. See the Work page for additional research, localization, and project-toolkit samples.
+    </p>
+</div>
+<div class="project-grid">
+<article class="project-card project-card--luxury" data-category="hospitality">
+<div class="project-eyebrow">Hospitality · Consumer Insights · In Progress</div>
+<h3 class="project-title">The Luxury Expectation Gap</h3>
+<p class="project-hook">When five-star reputations meet real guest experiences.</p>
+<p class="project-summary">An independent review-based research project comparing luxury hotel brand expectations with reported service, room quality, perceived value, and recovery experiences in Singapore and Kuala Lumpur.</p>
+<div class="project-tags">
+<span class="project-tag">Guest Reviews</span><span class="project-tag">Brand Experience</span><span class="project-tag">Hospitality</span>
+</div>
+<a class="project-footer-link" href="myworks.html#luxury-case">Explore research <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project-card" data-category="marketing">
+<div class="project-eyebrow">Airlines · Marketing Strategy</div>
+<h3 class="project-title">AMA Case Competition — Singapore Airlines</h3>
+<p class="project-hook">An airline growth strategy built on audience and competitor research.</p>
+<p class="project-summary">Developed a 12-month multichannel plan, KPI framework, assumptions and risks, and five-year outlook; presented recommendations to judges.</p>
+<div class="project-tags"><span class="project-tag">Airline Marketing</span><span class="project-tag">Brand Strategy</span><span class="project-tag">KPIs</span></div>
+<a class="project-footer-link" href="myworks.html#ama-case">View case study <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project-card" data-category="analysis">
+<div class="project-eyebrow">Data Analysis · Research Communication</div>
+<h3 class="project-title">NOAA × Zillow — INFO 201 Dashboard</h3>
+<p class="project-hook">Exploring storm events and home-value data with reproducible analytics.</p>
+<p class="project-summary">Built an R and Quarto report with data joins, ggplot2 and Plotly visualizations, and careful interpretation of associations.</p>
+<div class="project-tags"><span class="project-tag">R + Quarto</span><span class="project-tag">Data Visualization</span><span class="project-tag">Research</span></div>
+<a class="project-footer-link" href="myworks.html#info201-case">View case study <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+</div>
+</section>
+<!-- Video editing & storytelling: project-first, not an employment history -->
 
-    <!-- Featured projects -->
-    <section id="featured" aria-labelledby="featured-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="featured-heading">Featured projects</h2>
-          <p>
-            Selected projects that connect directly to my résumé: global marketing, localization,
-            campaign strategy, event promotion, data analysis, and business communication.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <!-- AMA Case Competition -->
-          <article class="project-card" data-category="marketing">
-            <div class="project-eyebrow">Marketing · Strategy · Presentation</div>
-            <h3 class="project-title">AMA Case Competition — Singapore Airlines</h3>
-            <p class="project-hook">Built a multi-channel launch plan with a KPI framework and five-year outlook.</p>
-            <p class="project-summary">Synthesized research, modeled scenarios, and presented to judges.</p>
-            <div class="project-tags" aria-label="Tags">
-              <span class="project-tag">Marketing</span>
-              <span class="project-tag">Strategy</span>
-              <span class="project-tag">KPI Framework</span>
-            </div>
-            <span class="featured-pill">Featured</span>
-            <a href="myworks.html#ama-case" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- Localization -->
-          <article class="project-card" data-category="localization">
-            <div class="project-eyebrow">Localization · Regulated Content</div>
-            <h3 class="project-title">EN↔JP Technical Localization — Derived Samples</h3>
-            <p class="project-hook">Technical materials localized to natural, professional Japanese.</p>
-            <p class="project-summary">
-              Paraphrased samples imitating internship-level clinical/technical content with consistent terminology and register.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Localization</span>
-              <span class="project-tag">JP·EN</span>
-              <span class="project-tag">Technical</span>
-            </div>
-            <span class="featured-pill">Featured</span>
-            <a href="myworks.html#localization-case" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <!-- Digital tool rollout -->
-          <article class="project-card" data-category="operations">
-            <div class="project-eyebrow">Project Management · Adoption</div>
-            <h3 class="project-title">Digital Tool Rollout Starter Kit </h3>
-            <p class="project-hook">
-              Implementation tracker, weekly status updates, adoption dashboard, and a short training kit.
-            </p>
-            <p class="project-summary">
-              Designed a complete toolkit to help teams coordinate digital tool rollouts, measure adoption,
-              and onboard business users quickly.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Project coordination</span>
-              <span class="project-tag">KPI reporting</span>
-              <span class="project-tag">Training</span>
-            </div>
-            <span class="featured-pill">Featured</span>
-            <a href="myworks.html#appointment" class="project-footer-link">
-              View case study <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Video editing & storytelling: project-first, not an employment history -->
-    <section id="videos" aria-labelledby="videos-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="videos-heading">Video editing &amp; storytelling</h2>
-          <p>Two editing styles: a research-led video essay and a short-form creative edit. Watch both with project notes on my Work page.</p>
-        </div>
-        <div class="video-preview-grid">
-          <a class="video-preview-card" href="myworks.html#video-editing" aria-label="Watch long-form video essay and view editing notes">
-            <div class="video-preview-thumb">
-              <img src="https://i.ytimg.com/vi/MM_9I_ruhL4/hqdefault.jpg" alt="Thumbnail of my long-form video essay" loading="lazy" />
-              <span class="video-preview-play" aria-hidden="true">▶</span>
-            </div>
-            <div class="video-preview-copy">
-              <span class="video-preview-type">Long-form · Video essay</span>
-              <h3>Research video essay</h3>
-              <p>Building a clear narrative with visual sequencing and deliberate pacing.</p>
-              <span class="video-preview-link">Watch project ↗</span>
-            </div>
-          </a>
-          <a class="video-preview-card" href="myworks.html#video-editing" aria-label="Watch short-form travel comedy and view editing notes">
-            <div class="video-preview-thumb">
-              <img src="https://i.ytimg.com/vi/-b27MpLTLX4/hqdefault.jpg" alt="Thumbnail of my short-form creative edit" loading="lazy" />
-              <span class="video-preview-play" aria-hidden="true">▶</span>
-            </div>
-            <div class="video-preview-copy">
-              <span class="video-preview-type">Short-form · Creative edit</span>
-              <h3>Travel comedy short</h3>
-              <p>Turning travel moments into a playful story through cuts, captions, and comic timing.</p>
-              <span class="video-preview-link">Watch project ↗</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills & tools -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="skills-heading">Skills &amp; tools</h2>
-          <p>Compact overview for quick screening. I am comfortable working across marketing, localization, and analytics teams.</p>
-        </div>
-        <div class="skills-wrap" aria-label="Skills and tools">
-          <span class="skill-pill">Marketing Strategy</span>
-          <span class="skill-pill">Brand Positioning</span>
-          <span class="skill-pill">Market Research</span>
-          <span class="skill-pill">Consumer Insight</span>
-          <span class="skill-pill">Digital Campaign Planning</span>
-          <span class="skill-pill">Presentation & Storytelling</span>
-          <span class="skill-pill">Cross-Cultural Communication</span>
-          <span class="skill-pill">EN–JP–ZH Localization</span>
-          <span class="skill-pill">Japanese · English · Chinese</span>
-          <span class="skill-pill">R / ggplot2 / dplyr</span>
-          <span class="skill-pill">Quarto Reports</span>
-          <span class="skill-pill">Python Basics</span>
-          <span class="skill-pill">Excel / PowerPoint / Word</span>
-          <span class="skill-pill">Canva / Figma</span>
-          <span class="skill-pill">Adobe Premiere Pro</span>
-          <span class="skill-pill">Video Editing &amp; Storytelling</span>
-          <span class="skill-pill">Adobe Photoshop</span>
-          <span class="skill-pill">UX/UI Awareness</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="about-heading">About</h2>
-        </div>
-        <div class="about-body">
-            <p>
-              I am a trilingual undergraduate at the University of Washington based in Seattle. I support client-facing materials and
-              research with clear writing, localization, and organized handoffs. My focus is accuracy, readability, and measurable results.
-            </p>
-            <p>
-              Recent coursework includes INFO 201 (Data Analysis &amp; Visualization), FIN 205 (Personal Financial Literacy),
-              R E 250 (Introduction to Real Estate), ACCTG 225 (Managerial Accounting), and MGMT 200 (Introduction to Law).
-              These projects have given me practice with R + Quarto reports, real-estate market briefs, finance assignments,
-              and clear business-style writing. My video projects add another dimension: visual storytelling and post-production.
-            </p>
-          </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="contact-heading">Let’s work together.</h2>
-        </div>
-
-        <div class="contact-layout">
-          <div class="contact-body">
-            <p>
+<!-- Skills & tools -->
+<section aria-labelledby="skills-heading" id="skills">
+<div class="container">
+<div class="section-heading">
+<h2 id="skills-heading">Skills &amp; tools</h2>
+<p>Research and communication skills supported by the projects featured here.</p>
+</div>
+<div aria-label="Skills and tools" class="skills-wrap">
+<span class="skill-pill">Consumer &amp; Market Research</span>
+<span class="skill-pill">Brand Strategy</span>
+<span class="skill-pill">Audience Insights</span>
+<span class="skill-pill">Research Synthesis</span>
+<span class="skill-pill">Source Evaluation</span>
+<span class="skill-pill">Scenario Analysis</span>
+<span class="skill-pill">KPI Tracking</span>
+<span class="skill-pill">Executive Presentations</span>
+<span class="skill-pill">Cross-Cultural Communication</span>
+<span class="skill-pill">Content Localization</span>
+<span class="skill-pill">Excel / PowerPoint / Google Workspace</span>
+<span class="skill-pill">R / Quarto / ggplot2</span>
+<span class="skill-pill">Figma / Canva</span>
+<span class="skill-pill">Python (Basic)</span>
+<span class="skill-pill">Chinese (Native) · English (Fluent) · Japanese (JLPT N1)</span>
+</div>
+</div>
+</section>
+<!-- About -->
+<section aria-labelledby="about-heading" id="about">
+<div class="container">
+<div class="section-heading">
+<h2 id="about-heading">About</h2>
+</div>
+<div class="about-body">
+<p>I'm a Sociology student pursuing a Business minor at the University of Washington. I'm interested in how customers interpret brands, how everyday service experiences shape trust, and what businesses can learn from qualitative and quantitative evidence.</p>
+<p>My projects span luxury-hotel guest-review research, airline marketing strategy, real-estate market analysis, and data visualization. I'm especially interested in consumer insights and brand strategy within travel, hospitality, loyalty, beauty, and luxury. Additional localization and communication projects are available on my Work page.</p>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section aria-labelledby="contact-heading" id="contact">
+<div class="container">
+<div class="section-heading">
+<h2 id="contact-heading">Let’s work together.</h2>
+</div>
+<div class="contact-layout">
+<div class="contact-body">
+<p>
               Email me at
               <a href="mailto:rubyxia369@gmail.com">rubyxia369@gmail.com</a>
               or connect on
-              <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>.
+              <a href="https://www.linkedin.com/in/ruby-xia-450414295" rel="noopener" target="_blank">LinkedIn</a>.
             </p>
-            <p>
-              I am open to marketing, localization, and data-focused roles where clear communication and organized handoffs matter.
-            </p>
-          </div>
-        <form
-          id="contact-form"
-          aria-label="Contact form"
-          action="https://formspree.io/f/mvgebajn"
-          method="POST"
-        >
-          <div>
-            <label for="contact-subject">Subject</label>
-            <input id="contact-subject" name="subject" type="text" placeholder="Project, role, or question" />
-          </div>
-          <div>
-            <label for="contact-email">Email</label>
-            <input id="contact-email" name="email" type="email" placeholder="you@example.com" />
-          </div>
-          <div>
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" placeholder="Share a few details about what you have in mind."></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Send message</button>
-          <p id="contact-status" class="contact-status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Legal notes -->
-  <section class="legal-notes">
-    <div class="container">
-      <h2 class="legal-title">Legal &amp; notes</h2>
-      <p class="legal-text">
+<p>I am interested in consumer insights, market research, and brand strategy opportunities, especially in travel, hospitality, loyalty, beauty, and luxury.</p>
+</div>
+<form action="https://formspree.io/f/mvgebajn" aria-label="Contact form" id="contact-form" method="POST">
+<div>
+<label for="contact-subject">Subject</label>
+<input id="contact-subject" name="subject" placeholder="Project, role, or question" type="text"/>
+</div>
+<div>
+<label for="contact-email">Email</label>
+<input id="contact-email" name="email" placeholder="you@example.com" type="email"/>
+</div>
+<div>
+<label for="contact-message">Message</label>
+<textarea id="contact-message" name="message" placeholder="Share a few details about what you have in mind."></textarea>
+</div>
+<button class="btn btn-primary" type="submit">Send message</button>
+<p aria-live="polite" class="contact-status" id="contact-status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Legal notes -->
+<section class="legal-notes">
+<div class="container">
+<h2 class="legal-title">Legal &amp; notes</h2>
+<p class="legal-text">
         This portfolio is for personal, non-commercial use and demonstration only. Case studies are based on coursework,
         competitions, and self-initiated projects. Some details may be simplified or combined to protect confidentiality.
       </p>
-      <p class="legal-text">
+<p class="legal-text">
         Any clinical, laboratory, or health-related content is illustrative and must not be used as medical advice or to interpret
         test results. Opinions expressed are my own and do not represent the University of Washington, SpectraCell Laboratories,
         or any past collaborators.
       </p>
-      <p class="legal-text">
+<p class="legal-text">
         All trademarks, logos, and brand names are the property of their respective owners.
       </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-row">
-      <div class="footer-top">
-        <div class="footer-main">
-          <span>© <span id="year"></span> Ziyu Xia</span>
-          <span class="footer-dot">·</span>
-          <a href="#hero">Home</a>
-          <span class="footer-dot">·</span>
-          <a href="myworks.html">Work</a>
-          <span class="footer-dot">·</span>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-links">
-          <a href="mailto:rubyxia369@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/ruby-xia-450414295" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="Ziyu_Xia_Resume_Primary.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-        </div>
-      </div>
-      <div class="footer-accessibility">
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container footer-row">
+<div class="footer-top">
+<div class="footer-main">
+<span>© <span id="year"></span> Ziyu Xia</span>
+<span class="footer-dot">·</span>
+<a href="#hero">Home</a>
+<span class="footer-dot">·</span>
+<a href="myworks.html">Work</a>
+<span class="footer-dot">·</span>
+<a href="#contact">Contact</a>
+</div>
+<div class="footer-links">
+<a href="mailto:rubyxia369@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/ruby-xia-450414295" rel="noopener" target="_blank">LinkedIn</a>
+<a href="Ruby_Xia_Resume.pdf" rel="noopener" target="_blank">Résumé (PDF)</a>
+</div>
+</div>
+<div class="footer-accessibility">
         Accessibility: alt text on images, high-contrast palette, keyboard-navigable forms.
       </div>
-    </div>
-  </footer>
-    <script>
+</div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();
+
       // In-page AJAX submit to Formspree
       const form = document.getElementById('contact-form');
       const statusEl = document.getElementById('contact-status');
@@ -954,6 +797,5 @@
         }
       });
     </script>
-
 </body>
 </html>
